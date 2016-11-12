@@ -1,0 +1,47 @@
+body { background-color: white; font-family: georgia, serif; font-size:16px; padding: 0; }
+.fore { background-color: #f8f8f8; color: #222; border: 1px solid #aaa; padding: 24px; }
+
+a { color: #4A78BA; text-decoration: none; } /* #4C73BF; */
+a:hover { text-decoration: underline; }
+a.gray { color: #bbb; }
+a.gray:hover { text-decoration: none; }
+
+.indent { margin-left: 24px; }
+small { font-size: 15px; }   
+
+h1 { font-size: 24px; margin: 0; padding: 0; }
+h2 { position: relative; font-size: 19px; margin: 16px 0 0 0; padding: 8px 0 0 0; border-top: 1px solid #bbb; line-height: 20px; }
+h2 span { float: right; font-size: 16px; padding-top: 2px; }
+h2 span a { margin-left: 12px; }
+h3 { font-size: 19px; margin: 24px 0 13px 0; padding: 0; }
+
+@media screen {
+  span.external a {
+    background: url(external.png) center right no-repeat !important;
+    background-size: 10px 10px !important;
+    padding-right: 13px !important;
+  }
+  span.pdf a {
+    background: url(pdf.png) center right no-repeat !important;
+    background-size: 15px 15px !important;
+    padding-right: 17px !important;
+  }
+  span.ppt a {
+    background: url(ppt.png) center right no-repeat !important;
+    padding-right: 19px !important;
+  }
+  span.video a {
+    background: url(video.png) center right no-repeat !important;
+    padding-right: 23px !important;
+  }
+  span.audio a {
+    background: url(audio.png) center right no-repeat !important;
+    padding-right: 24px !important;
+  }
+}
+
+@media print {
+  body { font-size: 80%; }
+  .fore { background-color: white; color: black; border: 0; }
+  .morelinks, .noprint { display: none; }
+}
