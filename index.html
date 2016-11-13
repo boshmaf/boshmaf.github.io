@@ -18,7 +18,7 @@
     #border { width:985px; border: 1px solid #aaa; background-color: #f8f8f8; padding: 24px 0; }
     .column { position: relative; padding: 0 24px; text-align: left; vertical-align: top; }
     .column#left { width: 336px; border-right: 1px solid #ccc; }
-    .date { margin: 0 0 5px 0; text-decoration: underline; }
+    .underlined { margin: 0 0 5px 0; text-decoration: underline; }
     p { margin: 14px 0 0 0; padding: 0; }
     img { border: 0; }
     h1 { font-size: 24px; margin: 9px 0 6px 0; padding: 0; }
@@ -35,7 +35,6 @@
     .footer{ margin: 15px 0 0 0; display: table; text-align: center; margin-left: auto; margin-right: auto; }
   </style>
 
-</head>
 
 <body>
 
@@ -57,12 +56,13 @@
     </tr>
     <tr>
       <td class="l">office:</td>
-      <td><span>+974 4454 0629</span></td>
+      <td><span id="phone">+974-445-[four one five five two]</span></td>
     </tr>
     <tr>
       <td class="l"></td>
        <td>
         HBKU Research Complex<br>
+        RC-B1-1146, Room A141<br>
         Education City<br>
         Doha, Qatar
       </td>
@@ -76,12 +76,33 @@
     Research and bio
   </h2>
 
-  <p>My research is centered around the security and privacy of social and information networks, 
-  with an emphasis on problems that broadly impact the way people use the Internet.</p>
+  <p>My research is centered around the security and privacy of social and information networks, with an emphasis on problems that broadly impact the way people use technology and the Internet.</p>
 
-  <p>I received my <a href="https://dx.doi.org/10.14288/1.0167277">PhD</a> in <a href="http://www.ece.ubc.ca/">Electrical and Computer Engineering</a> from the University of British Columbia under the mentorship of <a href="http://www.ece.ubc.ca/~beznosov/">Konstantin Beznosov</a> and <a href="http://www.ece.ubc.ca/~matei/">Matei Ripeanu</a>.</p>
+  <p>I received my PhD in <a href="http://www.ece.ubc.ca/">Electrical and Computer Engineering</a> from the University of British Columbia (UBC), under the mentorship of <a href="http://www.ece.ubc.ca/~beznosov/">Konstantin Beznosov</a> and <a href="http://www.ece.ubc.ca/~matei/">Matei Ripeanu</a>. My <a href="https://dx.doi.org/10.14288/1.0167277">thesis</a> presented one of the first security analyses of malicious socialbots on the web.</p>
 
-  <p>I'm currently involved in research projects related to cyber security intelligence (DRDoS), Internet measurement (vulnerability scanning), Android security (crypto misuse), and Tor hidden services (deanonymization).</p>
+  <h2>
+    Current projects
+  </h2>
+
+  <p>
+    <div class="underlined">Cyber Security Intelligence</div>
+    I'm collaborating with <a href="http://qcri.com/">QCRI</a> CyberSec folks to build a real-time analytics platform for detecting and mitigating DRDoS attacks.
+  </p>
+
+  <p>
+    <div class="underlined">Internet Security Posture Assessment</div>
+    I'm collaborating with <a href="https://zmap.io/">ZMap</a> and <a href="https://censys.io/">Censys</a> folks from <a href="http://security.engin.umich.edu/">UMich</a> to explore how one would asses the security posture of a country on the Internet.
+  </p>
+
+  <p>
+    <div class="underlined">Mobile Cryptography Analytics</div>
+    I'm collaborating with <a href="http://lersse.ece.ubc.ca/">LERSSE</a> folks at <a href="http://www.ece.ubc.ca/">UBC</a> to build a cloud-based service for analyzing cryptographic API (mis)use in Android applications.
+  </p>
+
+  <p>
+    <div class="underlined">Anonymity of Tor Hidden Services</div>
+    I'm collaborating with <a href="http://www.qu.edu.qa/engineering/computer/">QU</a> folks to investigate the feasibility of deanonymizing Tor hidden service users by exploiting public Bitcoin information.
+  </p>
 
   <h2>
     <span class="morelinks"><a href="news.html">&raquo;&nbsp;older</a></span>
@@ -89,24 +110,22 @@
   </h2>
 
   <p class="indent">
-    <div class="date">Nov, 2016</div>
-    I serve on the poster program committee of <a href="http://www.codaspy.org/">CODASPY 2017</a><br>
-    I serve on the program committee of <a href="http://ifipsec.org/2016/">IFIP SEC 2017</a><br>
-    I serve as a reviewer for <a href="http://tops.acm.org/">ACM TOPS</a>
+    <div class="underlined">Nov, 2016</div>
+    I'm serving on the poster program committee of <a href="http://www.codaspy.org/">CODASPY 2017</a><br>
+    I'm serving on the program committee of <a href="http://ifipsec.org/2016/">IFIP SEC 2017</a><br>
+    I'm reviewing for <a href="http://tops.acm.org/">ACM TOPS</a>
   </p>
 
   <p class="indent" style="margin-top:6px;">
-    <div class="date">Oct, 2016</div>
+    <div class="underlined">Oct, 2016</div>
     I'm attending <a href="https://www.sigsac.org/ccs/CCS2016/">CCS 2016</a>. See you in Vienna!
   </p>
 
   <p class="indent" style="margin-top:6px;">
-    <div class="date">Sept, 2016</div>
+    <div class="underlined">Sept, 2016</div>
     I'm visiting <a href="http://www.ece.ubc.ca/">UBC</a>. See you in Vancouver!<br>
     I'm attending <a href="https://www.usenix.org/conference/usenixsecurity16">Usenix Sec 2016</a>. See you in Austin!
   </p>
-
-  <!-- Publications -->
 
   <h2>
     <span class="morelinks">
@@ -162,23 +181,28 @@
 
   <script type="text/javascript">
       function setText(id, t) {
-          var el = document.getElementById(id);
-          if (document.all) {
-              el.innerText = t;
-          } else {
-              el.textContent = t;
-          }
-          return el;
+        var el = document.getElementById(id);
+        if (document.all) {
+          el.innerText = t;
+        } else {
+          el.textContent = t;
+        }
+        return el;
       }
 
       function showemail(d,u) {
-          var email = u + "@" + d;
-          var el = setText('email', email);
-          el.setAttribute('href', 'mailto:'+email);
+        var email = u + "@" + d;
+        var el = setText('email', email);
+        el.setAttribute('href', 'mailto:'+email);
       }
+
+      function showphone(node, a,b,c) {
+        setText(node, '+1 '+a+'-'+b+'-'+c);
+      }
+
       showemail('hbku.edu.qa','yboshmaf');
+      showphone('phone', '974','445','41552');
 
   </script>
 </body>
 </html>
-
