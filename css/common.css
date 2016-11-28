@@ -22,9 +22,9 @@ h3 { font-size: 19px; margin: 24px 0 13px 0; padding: 0; }
     padding-right: 13px !important;
   }
   span.pdf a {
-    background: url(pdf.png) center right no-repeat !important;
+    background: url(../img/pdf.png) center right no-repeat !important;
     background-size: 15px 15px !important;
-    padding-right: 17px !important;
+    padding-right: 20px !important;
   }
   span.ppt a {
     background: url(ppt.png) center right no-repeat !important;
