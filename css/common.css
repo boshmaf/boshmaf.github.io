@@ -26,6 +26,11 @@ h3 { font-size: 19px; margin: 24px 0 13px 0; padding: 0; }
     background-size: 15px 15px !important;
     padding-right: 20px !important;
   }
+  span.info a {
+    background: url(../img/info.png) center right no-repeat !important;
+    background-size: 15px 15px !important;
+    padding-right: 20px !important;
+  }
   span.ppt a {
     background: url(ppt.png) center right no-repeat !important;
     padding-right: 19px !important;
