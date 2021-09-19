@@ -1,17 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Yazan Boshmaf, Research Scientist in Cyber Security at Qatar Computing Research Institute, HBKU">
-  <meta name="keywords" content="Yazan Boshmaf, Boshmaf, News, Security, Privacy, Research, QCRI, HBKU"> 
+  <meta name="description"
+    content="Yazan Boshmaf, Research Scientist in Cyber Security at Qatar Computing Research Institute, HBKU">
+  <meta name="keywords" content="Yazan Boshmaf, Boshmaf, News, Security, Privacy, Research, QCRI, HBKU">
 
   <title>Research - Yazan Boshmaf</title>
 
   <link rel="stylesheet" href="css/common.css" type="text/css">
   <style type="text/css">
-    .title { margin: 5px 0 5px 0; font-weight: bold; }
+    .title {
+      margin: 5px 0 5px 0;
+      font-weight: bold;
+    }
   </style>
 </head>
 
@@ -25,211 +28,361 @@
     <div class=spacer></div>
 
     <p class="indent">
-      <p style="padding: 16px 38px;"><em><b>Summary.</b> We live in the Information Age. Innovations in information technology, such as the World Wide Web (a.k.a. the Web), play a pivotal role in advancing today's knowledge-based societies and should be protected at all costs. My research revolves around the security and privacy of the Web, with an emphasis on problems that impact the way we adopt and use its underlying technologies. My ultimate goal is to empower Web users by building software systems that give users full control of their data, are resilient to centralized control, and offer higher levels of privacy and security.</em></p>
+    <p style="padding: 16px 38px;"><em><b>Summary.</b> We live in the Information Age. Innovations in information
+        technology, such as the World Wide Web (a.k.a. the Web), play a pivotal role in advancing today's
+        knowledge-based societies and should be protected at all costs. My research revolves around the security and
+        privacy of the Web, with an emphasis on problems that impact the way we adopt and use its underlying
+        technologies. My ultimate goal is to empower Web users by building software systems that give users full control
+        of their data, are resilient to centralized control, and offer higher levels of privacy and security.</em></p>
 
-      <div class="title">Background</div>
-      <p>One characteristic of the Information Age is that our society is surrounded by a high-tech global economy in which wealth is knowledge and growth is learning. This system of the world leads to a fundamental question about our experience with the Web: When we go online, how do we identify ourselves, connect with others, and gain knowledge?</p>
+    <div class="title">Background</div>
+    <p>One characteristic of the Information Age is that our society is surrounded by a high-tech global economy in
+      which wealth is knowledge and growth is learning. This system of the world leads to a fundamental question about
+      our experience with the Web: When we go online, how do we identify ourselves, connect with others, and gain
+      knowledge?</p>
 
-      <p>When I started exploring this question in 2010, as part of an early investigation of Web single sign-on [<a href="#1">1</a>], the answer was predominantly "Facebook." True then as it is now, we live in the Facebook Age. We identify ourselves with our Facebook accounts, we connect with others by sending friend requests, and we learn about the world from our newsfeeds. For many, the Web has become Facebook; or Google, Twitter, and the like. Regardless of which “walled garden” we choose to visit, the Web is far distant from its open standard origin. Today’s Web is dominated by a few large websites that use closed, centralized systems. Moreover, most of these websites implement a business model that allows them to be used for free in exchange for user data, which is then used for highly-targeted advertising. Other than treating users as commodities, this “free-to-use” business model is fundamentally flawed. A price of zero greatly reduces liabilities to users, especially privacy and security, incentivizes the use of abusive retention strategies, which profile users and herd them towards sharing more data, and prohibits market learning by hiding pricing signals, which hinders competition and innovation. Yet, the Web seems to work well in practice, does it not? Starting early 2011, I set out to test this proposition, focusing on the privacy and security implications of using large, centralized websites like Facebook.</p>
+    <p>When I started exploring this question in 2010, as part of an early investigation of Web single sign-on [<a
+        href="#1">1</a>], the answer was predominantly "Facebook." True then as it is now, we live in the Facebook Age.
+      We identify ourselves with our Facebook accounts, we connect with others by sending friend requests, and we learn
+      about the world from our newsfeeds. For many, the Web has become Facebook; or Google, Twitter, and the like.
+      Regardless of which “walled garden” we choose to visit, the Web is far distant from its open standard origin.
+      Today’s Web is dominated by a few large websites that use closed, centralized systems. Moreover, most of these
+      websites implement a business model that allows them to be used for free in exchange for user data, which is then
+      used for highly-targeted advertising. Other than treating users as commodities, this “free-to-use” business model
+      is fundamentally flawed. A price of zero greatly reduces liabilities to users, especially privacy and security,
+      incentivizes the use of abusive retention strategies, which profile users and herd them towards sharing more data,
+      and prohibits market learning by hiding pricing signals, which hinders competition and innovation. Yet, the Web
+      seems to work well in practice, does it not? Starting early 2011, I set out to test this proposition, focusing on
+      the privacy and security implications of using large, centralized websites like Facebook.</p>
 
-      <div class="title">The Centralized Web: The Case Against Facebook</div>
-      <p>As Facebook had 500 million monthly active users in 2011, and projecting its first billion within a year, I decided to investigate how feasible it is for an attacker to achieve a seemingly far-fetched goal: To automate, and effectively fake, the whole Facebook experience for many adversarial objectives, such as private data collections and misinformation.</p>
+    <div class="title">The Centralized Web: The Case Against Facebook</div>
+    <p>As Facebook had 500 million monthly active users in 2011, and projecting its first billion within a year, I
+      decided to investigate how feasible it is for an attacker to achieve a seemingly far-fetched goal: To automate,
+      and effectively fake, the whole Facebook experience for many adversarial objectives, such as private data
+      collections and misinformation.</p>
 
-      <div style="text-align: center;">
-        <img src="img/social_botnet.png" alt="Social botnet" style="width:360px;" />
-        <br><span><b>Figure 1.</b> Social botnet</span>
-      </div>
+    <div style="text-align: center;">
+      <img src="img/social_botnet.png" alt="Social botnet" style="width:360px;" />
+      <br><span><b>Figure 1.</b> Social botnet</span>
+    </div>
 
-      <p>After presenting the case for this investigation to The Office of the Privacy Commissioner of Canada, I started designing a Web automation tool called a socialbot. In concept, a socialbot controls a fictitious Facebook account and can perform social activities similar to those of real users, such as sending friend requests and posting messages. As such, a socialbot is designed to deceive and pass itself off as a human being. A network of socialbots can be controlled by an adversary in a command-and-control fashion, similar to malware botnets. For a social botnet to operate at scale, all aspects of its operation must be automated, including account creation, profile setup, befriending, and posting messages. The main challenge is not automation per se, but being able to infiltrate and connect with the rest of the Facebook network. This is the case because successful social infiltration is essential for evaluating privacy and security concerns, as isolated socialbots pose minimal risk to users and are easy to detect. To overcome this challenge, the socialbots are designed to exploit known concepts in sociology, such as targeting users with whom they have mutual friends (i.e., triadic closure), in order to improve their infiltration success rate.</p>
+    <p>After presenting the case for this investigation to The Office of the Privacy Commissioner of Canada, I started
+      designing a Web automation tool called a socialbot. In concept, a socialbot controls a fictitious Facebook account
+      and can perform social activities similar to those of real users, such as sending friend requests and posting
+      messages. As such, a socialbot is designed to deceive and pass itself off as a human being. A network of
+      socialbots can be controlled by an adversary in a command-and-control fashion, similar to malware botnets. For a
+      social botnet to operate at scale, all aspects of its operation must be automated, including account creation,
+      profile setup, befriending, and posting messages. The main challenge is not automation per se, but being able to
+      infiltrate and connect with the rest of the Facebook network. This is the case because successful social
+      infiltration is essential for evaluating privacy and security concerns, as isolated socialbots pose minimal risk
+      to users and are easy to detect. To overcome this challenge, the socialbots are designed to exploit known concepts
+      in sociology, such as targeting users with whom they have mutual friends (i.e., triadic closure), in order to
+      improve their infiltration success rate.</p>
 
-      <p>After consulting with the university’s research ethics board, I carefully operated a network of 100 socialbots on Facebook for eight weeks, resulting in one main finding: With up to 80% infiltration rate, 250GB of raw data collected from more than one million users, and less than 20% detection rate, Facebook and its users are left defenseless [<a href="#2">2</a>,<a href="#3">3</a>]. This was the first comprehensive study that showed the vulnerability of large, centralized online social networks (OSNs) like Facebook to fake, abusive automation, and has received the outstanding paper award at ACSAC '11. It also resulted in a private presentation to the InfoSec Technology Transition Council for the Science & Technology Directorate at the U.S. Department of Homeland Security, in addition to an international news coverage, years before Facebook was formally questioned by the U.S. Senate about its handling of user data, fake news, and political bias in 2018.</p>
+    <p>After consulting with the university’s research ethics board, I carefully operated a network of 100 socialbots on
+      Facebook for eight weeks, resulting in one main finding: With up to 80% infiltration rate, 250GB of raw data
+      collected from more than one million users, and less than 20% detection rate, Facebook and its users are left
+      defenseless [<a href="#2">2</a>,<a href="#3">3</a>]. This was the first comprehensive study that showed the
+      vulnerability of large, centralized online social networks (OSNs) like Facebook to fake, abusive automation, and
+      has received the outstanding paper award at ACSAC '11. It also resulted in a private presentation to the InfoSec
+      Technology Transition Council for the Science & Technology Directorate at the U.S. Department of Homeland
+      Security, in addition to an international news coverage, years before Facebook was formally questioned by the U.S.
+      Senate about its handling of user data, fake news, and political bias in 2018.</p>
 
-      <p>In 2012, shortly after this investigation, I started looking at how OSNs can protect their users from automated fake accounts [<a href="#4">4</a>]. Being closed and centralized, it is not possible to evaluate new defenses against the ones deployed by OSNs in practice, unless researchers find a way to collaborate with these OSNs. Back then, there were two main approaches to detect fake accounts. The first is statistical and relies on detecting anomalies in user behavior using machine learning. The second is mathematical and relies on computing properties of the social graph, which represents users and their friendships, using combinatorics and probability theory. In 2013, I showed that both approaches are ineffective against socialbots, as their threat model assumes fake accounts that cannot behave like real users; they must be spammy and relatively isolated from real accounts [<a href="#5">5</a>]. This investigation resulted in the best paper award at ASONAM '13, and highlighted the challenge for designing defense systems that consider a more realistic and resourceful adversary who can operate a social botnet.</p>
+    <p>In 2012, shortly after this investigation, I started looking at how OSNs can protect their users from automated
+      fake accounts [<a href="#4">4</a>]. Being closed and centralized, it is not possible to evaluate new defenses
+      against the ones deployed by OSNs in practice, unless researchers find a way to collaborate with these OSNs. Back
+      then, there were two main approaches to detect fake accounts. The first is statistical and relies on detecting
+      anomalies in user behavior using machine learning. The second is mathematical and relies on computing properties
+      of the social graph, which represents users and their friendships, using combinatorics and probability theory. In
+      2013, I showed that both approaches are ineffective against socialbots, as their threat model assumes fake
+      accounts that cannot behave like real users; they must be spammy and relatively isolated from real accounts [<a
+        href="#5">5</a>]. This investigation resulted in the best paper award at ASONAM '13, and highlighted the
+      challenge for designing defense systems that consider a more realistic and resourceful adversary who can operate a
+      social botnet.</p>
 
-      <div style="text-align: center;">
-        <img src="img/integro.png" alt="Integro's high-level design" style="width:340px;" />
-        <br><span><b>Figure 2.</b> Integro's high-level design</span>
-      </div>
+    <div style="text-align: center;">
+      <img src="img/integro.png" alt="Integro's high-level design" style="width:340px;" />
+      <br><span><b>Figure 2.</b> Integro's high-level design</span>
+    </div>
 
-      <p>From 2014 to 2015, after studying the human factors affecting social infiltration [<a href="#6">6</a>], I worked on building and improving Integro: A defense system that combines both approaches in a novel, infiltration-resilient user ranking scheme that helps OSNs detect fake accounts [<a href="#7">7</a>,<a href="#8">8</a>]. Integro predicts victims of fake accounts (i.e., potential victims) using supervised machine learning, with features extracted from basic account information. As such, it makes no limiting assumptions about fakes and shifts the focus to real accounts. Integro weights the social graph such that edges incident to potential victims have lower weights than others. It then computes a rank for each account based on the landing probability of a short, modified random walk that starts from a known real account. This walk is biased towards traversing accounts that are reachable through edges with higher weights, which means it is highly unlikely to land on fake accounts and most real accounts will be ranked higher than fake accounts, even if fakes have infiltrated many real accounts.</p>
+    <p>From 2014 to 2015, after studying the human factors affecting social infiltration [<a href="#6">6</a>], I worked
+      on building and improving Integro: A defense system that combines both approaches in a novel,
+      infiltration-resilient user ranking scheme that helps OSNs detect fake accounts [<a href="#7">7</a>,<a
+        href="#8">8</a>]. Integro predicts victims of fake accounts (i.e., potential victims) using supervised machine
+      learning, with features extracted from basic account information. As such, it makes no limiting assumptions about
+      fakes and shifts the focus to real accounts. Integro weights the social graph such that edges incident to
+      potential victims have lower weights than others. It then computes a rank for each account based on the landing
+      probability of a short, modified random walk that starts from a known real account. This walk is biased towards
+      traversing accounts that are reachable through edges with higher weights, which means it is highly unlikely to
+      land on fake accounts and most real accounts will be ranked higher than fake accounts, even if fakes have
+      infiltrated many real accounts.</p>
 
-      <p>I implemented Integro on top of open-source distributed systems and deployed it at Tuenti, a progressive OSN with millions of users. A production-class evaluation resulted in detecting nearly 10 times more fake accounts than existing defense systems. This was done in under 30 minutes for a social graph with 160 million nodes on 33 commodity machines.</p>
-      
-      <p>It is important to highlight that websites should take the initiative and integrate, or at least evaluate, new defense systems against theirs, hopefully before innovation is stifled by new, restrictive Web regulations that are drafted in response to emerging security and privacy concerns. This rings true with the new EU GDPR law put in place and the recent push in the U.S. to regulate high-tech companies.</p>
+    <p>I implemented Integro on top of open-source distributed systems and deployed it at Tuenti, a progressive OSN with
+      millions of users. A production-class evaluation resulted in detecting nearly 10 times more fake accounts than
+      existing defense systems. This was done in under 30 minutes for a social graph with 160 million nodes on 33
+      commodity machines.</p>
 
-      <div class="title">The Decentralized Web: The Case for Bitcoin</div>
-      <p>In 2016, I started exploring how victim prediction can be applied to different Web security problems [<a href="#9">9</a>]. I quickly realized, however, that this approach gives more legitimacy to collecting user data by closed, centralized systems. Moreover, operating “big data silos” will eventually be infeasible, as there will be far more data than a single, centralized system can manage for free.</p>
+    <p>It is important to highlight that websites should take the initiative and integrate, or at least evaluate, new
+      defense systems against theirs, hopefully before innovation is stifled by new, restrictive Web regulations that
+      are drafted in response to emerging security and privacy concerns. This rings true with the new EU GDPR law put in
+      place and the recent push in the U.S. to regulate high-tech companies.</p>
 
-      <p>With this perspective in mind, I revisited the threat of social botnets as an instance of the Sybil attack, which is a well-studied problem in distributed, decentralized identity-based system, such as Peer-to-Peer (P2P) networks. In the Sybil attack, an adversary abuses the system by forging multiple, dishonest identities, each called a Sybil, and joins the system under these identities for malicious objectives. A decentralized, distributed system that is resilient to the Sybil attack is a good candidate for influencing the design of next-generation Web systems. This is when I shifted my focus to Bitcoin and its underlying blockchain technology.</p>
+    <div class="title">The Decentralized Web: The Case for Bitcoin</div>
+    <p>In 2016, I started exploring how victim prediction can be applied to different Web security problems [<a
+        href="#9">9</a>]. I quickly realized, however, that this approach gives more legitimacy to collecting user data
+      by closed, centralized systems. Moreover, operating “big data silos” will eventually be infeasible, as there will
+      be far more data than a single, centralized system can manage for free.</p>
 
-      <p>Bitcoin is a digital currency that uses a P2P network to move money from one user to another, each represented by a single node in the network, without the need for intermediaries, such as banks. Transactions are verified by loosely-organized nodes called miners and recorded in a public, distributed ledger called a blockchain. The security of the blockchain is established by a chain of cryptographic puzzles that miners compete to solve. Each miner that successfully solves a crypto puzzle is allowed to record a set of transactions, and to collect a reward in Bitcoins. The more mining power (i.e., resources) a miner applies, the better are its chances to solve the puzzle first. This reward structure, also called proof-of-work, provides an incentive for miners to contribute their resources to the system, and is essential to the currency’s decentralized nature.</p>
+    <p>With this perspective in mind, I revisited the threat of social botnets as an instance of the Sybil attack, which
+      is a well-studied problem in distributed, decentralized identity-based system, such as Peer-to-Peer (P2P)
+      networks. In the Sybil attack, an adversary abuses the system by forging multiple, dishonest identities, each
+      called a Sybil, and joins the system under these identities for malicious objectives. A decentralized, distributed
+      system that is resilient to the Sybil attack is a good candidate for influencing the design of next-generation Web
+      systems. This is when I shifted my focus to Bitcoin and its underlying blockchain technology.</p>
 
-      <p>The Bitcoin network relies on IP address-based identity. In order to defend against Sybil attackers who attempts to fill the network with dishonest nodes, an honest node only makes an outbound connection to one IP address per /16 subnet (i.e., one IP out of a block of 65 thousand IPs). This reduces the probability of an honest node connecting to peers that are dishonest all the time. To defend against a Sybil attacker who controls miners, consensus in Bitcoin requires the majority of miners in the network to agree on the state of the blockchain. As it is financially infeasible for an adversary to control the majority of the mining power in the network, the security of the blockchain is preserved. This new crypto economy defined by Bitcoin is novel, and is already fueling new blockchain-based Web systems, such as Filecoin for data storage and Steemit for social networking.</p>
+    <p>Bitcoin is a digital currency that uses a P2P network to move money from one user to another, each represented by
+      a single node in the network, without the need for intermediaries, such as banks. Transactions are verified by
+      loosely-organized nodes called miners and recorded in a public, distributed ledger called a blockchain. The
+      security of the blockchain is established by a chain of cryptographic puzzles that miners compete to solve. Each
+      miner that successfully solves a crypto puzzle is allowed to record a set of transactions, and to collect a reward
+      in Bitcoins. The more mining power (i.e., resources) a miner applies, the better are its chances to solve the
+      puzzle first. This reward structure, also called proof-of-work, provides an incentive for miners to contribute
+      their resources to the system, and is essential to the currency’s decentralized nature.</p>
 
-      <div style="text-align: center;">
-        <img src="img/blockstack.png" alt="BlockStack's layered architecture" style="width:540px;" />
-        <br><span><b>Figure 3.</b> BlockStack's layered architecture</span>
-      </div>
+    <p>The Bitcoin network relies on IP address-based identity. In order to defend against Sybil attackers who attempts
+      to fill the network with dishonest nodes, an honest node only makes an outbound connection to one IP address per
+      /16 subnet (i.e., one IP out of a block of 65 thousand IPs). This reduces the probability of an honest node
+      connecting to peers that are dishonest all the time. To defend against a Sybil attacker who controls miners,
+      consensus in Bitcoin requires the majority of miners in the network to agree on the state of the blockchain. As it
+      is financially infeasible for an adversary to control the majority of the mining power in the network, the
+      security of the blockchain is preserved. This new crypto economy defined by Bitcoin is novel, and is already
+      fueling new blockchain-based Web systems, such as Filecoin for data storage and Steemit for social networking.</p>
 
-      <p>In 2017, to better understand how decentralized systems like Bitcoin affect the way we use the Web, I started looking at ways to link off-chain data (e.g., a Twitter account) to on-chain data (e.g., a Bitcoin address), focusing on applications related to privacy research and law enforcement. Existing blockchain analysis systems, such as BlockSci, focus on efficiently analyzing on-chain data, with no or limited support for auxiliary data. To address this limitation, I am currently building and improving BlockStack: A full-stack search, tagging, and analysis system for blockchains [<a href="#10">10</a>,<a href="#11">11</a>,<a href="#12">12</a>,<a href="#12">13</a>]. The challenge is to find a way to systematically incorporate auxiliary data into the blockchain so that a new class of queries, which involve clustering, linking, and searching on/off-chain data, can be performed using existing analysis systems. BlockStack addresses this challenge by annotating on-chain data with tags, which are auxiliary, off-chain data crawled from the Web and other information networks, such as Tor. These tags are managed separately from the analysis sub-system as mappings, which can be clustered, linked, and searched through blockchain transactions. To simplify blockchain analysis, BlockStack separates functionality by defining a layered system architecture (i.e., a stack), where search, tagging, and analysis have separate layers with well-defined and extendable interfaces between them. This allows BlockStack to provide quick, partial answers to high-level queries like: "which Twitter accounts made Bitcoin payments to Silk Road."</p>
+    <div style="text-align: center;">
+      <img src="img/toshi.png" alt="Toshi's high-level architecture" style="width:620px;" />
+      <br><span><b>Figure 3.</b> Toshi's high-level architecture</span>
+    </div>
 
-      <p>BlockTag, the tagging sub-system of BlockStack, implements four vertical crawlers that are configured to annotate Bitcoin addresses with three types of tags: user tags representing BitcoinTalk and Twitter user accounts, service tags representing Tor hidden service providers that are indexed by Ahmia search engine, and text tags representing user-generated textual labels submitted to Blockchain.info. In early 2018, after consulting with the university’s research ethics board, I deployed BlockTag on a private, server-grade machine for three months. During this time, BlockTag ingested about 5 billion tweets, 2.2 million BitcoinTalk user profiles, 1.5 thousand Tor onion pages, and 30 thousand Blockchain.info labels. This has resulted in 45 thousand user, 88 service, and 29 thousand text tags. Based on these tags, it was relatively easy to deanonymize users of Tor hidden services and investigate Bitcoin fraud. In particular, BlockTag was able to link 125 user accounts to 20 service providers, which include illegal and controversial ones, such as Silk Road and The Pirate Bay. Moreover, BlockTag was able to link 24.4 thousand BitcoinTalk users to MMM, which is one of the world’s largest Ponzi scheme on Bitcoin. Two of the MMM-linked users controlled Bitcoin addresses that have received a total of two million Bitcoins, most of which were exchanged into other currencies using crypto exchange services, such as Huobi. This study led to a private presentation to The Office of Technology Research and Investigation at the U.S. Federal Trade Commission and an international news coverage.</p>
+    <p>In 2017, to better understand how decentralized systems like Bitcoin affect the way we use the Web, I started
+      looking at ways to link off-chain data (e.g., a Twitter account) to on-chain data (e.g., a Bitcoin address),
+      focusing on applications related to privacy research and law enforcement. Existing blockchain analysis systems,
+      such as BlockSci, focus on efficiently analyzing on-chain data, with no or limited support for auxiliary data. To
+      address this limitation, I am currently building and improving Toshi: A full-stack search, tagging, and
+      analysis system for blockchains [<a href="#10">10</a>,<a href="#11">11</a>]. The challenge is to find a way to
+      systematically incorporate auxiliary data into the
+      blockchain so that a new class of queries, which involve clustering, linking, and searching on/off-chain data, can
+      be performed using existing analysis systems. Toshi addresses this challenge by annotating on-chain data with
+      tags, which are auxiliary, off-chain data crawled from the Web and other information networks, such as Tor. These
+      tags are managed separately from the analysis sub-system as annotations, which can be clustered, linked, and
+      searched
+      through blockchain transactions. To simplify blockchain analysis, Toshi separates functionality by defining a
+      component-based, layered system architecture (i.e., a stack), where blockchain, data management, annotation, and
+      analytics have separate
+      component with
+      well-defined and extendable interfaces between them. This allows Toshi to provide quick, partial answers to
+      high-level queries like: "which Twitter accounts made Bitcoin payments to Silk Road."</p>
 
-      <div class="title">Moving Forward: Towards a Private, Secure, and Decentralized Web</div>
-      <p>For the short term, I plan to continue working on BlockStack, starting with BlockSearch: A Google-like searching layer that sits on top of BlockTag. BlockSearch will enable full-text search of off/on-chain data in real-time, without having to write low-level queries using BlockTag. I then plan to deploy BlockStack as an interactive blockchain analytics service, with dashboards displaying real-time results of important, user-defined queries. Based on feedback from the U.S. Federal Trade Commission and Qatar Financial Center Regulatory Authority, such capabilities are extremely helpful to protect customers, comply with Know Your Customer and Anti-Money Laundering laws, and draft new, investor-friendly cryptocurrency regulations.</p>
+    <p>As a proof of concept, we deployed Toshi in 2019 to investigate user privacy in anonymity networks [<a
+        href="#12">12</a>],
+      where we were able to
+      deanonymize Tor hidden service users, and to anaylze
+      fraudlent transactions on Bitcoin [<a href="#13">13</a>], where we were able to under the operation of MMM, one of
+      the world's largest
+      Ponzi schemes. My ongoing work with Toshi has led to a private presentation to The
+      Office of Technology Research and Investigation at the U.S. Federal Trade Commission, multi-year, multi-million
+      dollar research grants from Qatar National Research Fund, and an international news
+      coverage.</p>
 
-      <p>For the longer term, I plan to analyze the privacy and security of general-purpose, decentralized Internet platforms, such as Ethereum, EOS, and IPFS, which are currently used to build next-generation websites. As users should have the freedom to choose where their data is stored and who is allowed to access it, I plan to focus on achieving true data ownership on the Web. One future direction is to decouple Web data from its applications, with mapping information residing on a public, permissioned blockchain. As such, a Web browser acts as a decentralized content explorer that executes user-defined, self-contained, tokenized applications. This also allows both versions of the Web to co-exist, with current centralized websites acting as both content and application providers.</p>
+    <div class="title">Moving Forward: Towards a Private, Secure, and Decentralized Web</div>
+    <p>For the short term, I plan to continue working on Toshi, focusing on fraud detection and transactions risk
+      scoring. I then plan to deploy Toshi as an interactive
+      blockchain analytics service, with dashboards displaying real-time results of important, user-defined queries.
+      Based on feedback from the U.S. Federal Trade Commission and Qatar Financial Center Regulatory Authority, such
+      capabilities are extremely helpful to protect customers, comply with Know Your Customer and Anti-Money Laundering
+      laws, and draft new, investor-friendly cryptocurrency regulations.</p>
 
-      <div class="title">References</div>
-      <ol>
+    <p>For the longer term, I plan to analyze the privacy and security of general-purpose, decentralized Internet
+      platforms, such as Ethereum, EOS, and IPFS, which are currently used to build next-generation websites in the new
+      Web, or Web 3.0. As users
+      should have the freedom to choose where their data is stored and who is allowed to access it, I plan to focus on
+      achieving true data ownership on the Web. One future direction is to decouple Web data from its applications, with
+      mapping information residing on a public, permissioned blockchain. As such, a Web browser acts as a decentralized
+      content explorer that executes user-defined, self-contained, tokenized applications. This also allows both
+      versions of the Web to co-exist, with current centralized websites acting as both content and application
+      providers.</p>
 
-        <li id="1">
-          <p>
-            <div><span class="pdf"><a href="http://www.nspw.org/2009/proceedings/2010/nspw2010-sun.pdf">A Billion Keys, but Few Locks: The Crisis of Web Single Sign-on</a></span></div>
-            <small>
-              San-Tsai Sun, Yazan Boshmaf, Kirstie Hawkey, and Konstantin Beznosov
-              <div class=ref><i>Proc. of 2010 New Security Paradigms Workshop</i><br>
-              NSPW &rsquo;10, Colonial Inn, Concord, MA, Dec 2010</div>
-            </small>
-          </p>
-        </li>
+    <div class="title">References</div>
+    <ol>
 
-        <li id="2">
-          <p>
-            <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/264/files/264.pdf">The Socialbot Network: When Bots Socialize for Fame and Money</a></span></div>
-            <small>
-              Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu
-              <div class=ref><i>Proc. of 27th Annual Computer Security Applications Conference</i><br>
-              ACSAC &rsquo;11, Orlando, FL, Dec 2011 &mdash; <b>outstanding paper award</b></div>
-            </small>
-          </p>
-        </li>
+      <li id="1">
+        <p>
+        <div><span class="pdf"><a href="http://www.nspw.org/2009/proceedings/2010/nspw2010-sun.pdf">A Billion Keys, but
+              Few Locks: The Crisis of Web Single Sign-on</a></span></div>
+        <small>
+          San-Tsai Sun, Yazan Boshmaf, Kirstie Hawkey, and Konstantin Beznosov
+          <div class=ref><i>Proc. of 2010 New Security Paradigms Workshop</i><br>
+            NSPW &rsquo;10, Colonial Inn, Concord, MA, Dec 2010</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="3">
-          <p>
-            <div><span class="pdf"><a href="http://137.82.84.194/record/277/files/277.pdf">Design and Analysis of a Social Botnet</a></span></div>
-            <small>
-              Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu
-              <div class=ref><i>Elsevier Computer Networks</i><br>
-              Volume 57 Issue 2, Pages 556-578, Feb 2013</div>
-            </small>
-          </p>
-        </li>
+      <li id="2">
+        <p>
+        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/264/files/264.pdf">The Socialbot Network:
+              When Bots Socialize for Fame and Money</a></span></div>
+        <small>
+          Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu
+          <div class=ref><i>Proc. of 27th Annual Computer Security Applications Conference</i><br>
+            ACSAC &rsquo;11, Orlando, FL, Dec 2011 &mdash; <b>outstanding paper award</b></div>
+        </small>
+        </p>
+      </li>
 
-        <li id="4">
-          <p>
-            <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/275/files/275.pdf">Key Challenges in Defending against Malicious Socialbots</a></span></div>
-            <small>
-              Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, Matei Ripeanu
-              <div class=ref><i>Proc. of 5th USENIX Workshop on Large-Scale Exploits and Emergent Threats</i><br>
-              LEET &rsquo;12, San Jose, CA, April 2012</div>
-            </small>
-          </p>
-        </li>
+      <li id="3">
+        <p>
+        <div><span class="pdf"><a href="http://137.82.84.194/record/277/files/277.pdf">Design and Analysis of a Social
+              Botnet</a></span></div>
+        <small>
+          Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu
+          <div class=ref><i>Elsevier Computer Networks</i><br>
+            Volume 57 Issue 2, Pages 556-578, Feb 2013</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="5">
-          <p>
-            <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/286/files/ASONAM_2013.pdf">Graph-based Sybil Detection in Social and Information Systems</a></span></div>
-            <small>
-              Yazan Boshmaf, Konstantin Beznosov, and Matei Ripeanu
-              <div class=ref><i>Proc. of 2013 IEEE/ACM International Conference on Advances in Social Networks  Analysis and Mining</i><br>
-              ASONAM &rsquo;13, Niagara Falls, Canada, August 2013 &mdash; <b>best paper award</b></div>
-            </small>
-          </p>
-        </li>
+      <li id="4">
+        <p>
+        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/275/files/275.pdf">Key Challenges in
+              Defending against Malicious Socialbots</a></span></div>
+        <small>
+          Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, Matei Ripeanu
+          <div class=ref><i>Proc. of 5th USENIX Workshop on Large-Scale Exploits and Emergent Threats</i><br>
+            LEET &rsquo;12, San Jose, CA, April 2012</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="6">
-          <p>
-            <div><span class="pdf"><a href="https://www.usenix.org/system/files/conference/soups2014/soups14-paper-rashtian.pdf">To Befriend or Not? A Model of Friend Request Acceptance on Facebook</a></span></div>
-            <small>
-              Hootan Rashtian, Yazan Boshmaf, Pooya Jaferian, and Konstantin Beznosov
-              <div class=ref><i>Proc. of 2014 Symposium on Usable Privacy and Security</i><br>
-              SOUPS &rsquo;14, Menlo Park, CA, July 2014</div>
-            </small>
-          </p>
-        </li>
+      <li id="5">
+        <p>
+        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/286/files/ASONAM_2013.pdf">Graph-based Sybil
+              Detection in Social and Information Systems</a></span></div>
+        <small>
+          Yazan Boshmaf, Konstantin Beznosov, and Matei Ripeanu
+          <div class=ref><i>Proc. of 2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and
+              Mining</i><br>
+            ASONAM &rsquo;13, Niagara Falls, Canada, August 2013 &mdash; <b>best paper award</b></div>
+        </small>
+        </p>
+      </li>
 
-        <li id="7">
-          <p>
-            <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf">Leveraging Victim Prediction for Robust Fake Account Detection in OSNs</a></span></div>
-            <small>
-              Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, and Konstantin Beznosov
-              <div class=ref><i>Proc. of 2015 Network and Distributed System Security Symposium</i><br>
-              NDSS &rsquo;15, San Diego, CA, Feb 2015</div>
-            </small>
-          </p>
-        </li>
+      <li id="6">
+        <p>
+        <div><span class="pdf"><a
+              href="https://www.usenix.org/system/files/conference/soups2014/soups14-paper-rashtian.pdf">To Befriend or
+              Not? A Model of Friend Request Acceptance on Facebook</a></span></div>
+        <small>
+          Hootan Rashtian, Yazan Boshmaf, Pooya Jaferian, and Konstantin Beznosov
+          <div class=ref><i>Proc. of 2014 Symposium on Usable Privacy and Security</i><br>
+            SOUPS &rsquo;14, Menlo Park, CA, July 2014</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="8">
-          <p>
-            <div><span class="pdf"><a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43862.pdf">Thwarting Fake OSN Accounts by Predicting their Victims</a></span></div>
-            <small>
-              Yazan Boshmaf, Matei Ripeanu, Konstantin Beznosov, and Elizeu Santos-Neto
-              <div class=ref><i>Proc. 8th ACM Workshop on Artificial Intelligence and Security</i><br>
-              AI-Sec &rsquo;15, Denver, CO, Oct 2015</div>
-            </small>
-          </p>
-        </li>
-        
-        <li id="9">
-          <p>
-            <div><span class="pdf"><a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45557.pdf">Harvesting the Low-Hanging Fruits: Defending Against Automated Large-Scale Cyber-Intrusions by Focusing on the Vulnerable Population</a></span></div>
-            <small>
-              Hassan Halawa, Konstantin Beznosov, Yazan Boshmaf, Baris Coskun, Elizeu Santos-Neto, and Matei Ripeanu
-              <div class=ref><i>Proc. of 2016 New Security Paradigms Workshop</i><br>
-              NSPW &rsquo;16, C Lazy U Ranc, CO, Sep 2016</div>
-            </small>
-          </p>
-        </li>
+      <li id="7">
+        <p>
+        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf">Leveraging
+              Victim Prediction for Robust Fake Account Detection in OSNs</a></span></div>
+        <small>
+          Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, and Konstantin
+          Beznosov
+          <div class=ref><i>Proc. of 2015 Network and Distributed System Security Symposium</i><br>
+            NDSS &rsquo;15, San Diego, CA, Feb 2015</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="10">
-          <p>
-            <div><span class="pdf"><a href="https://arxiv.org/pdf/1801.07501.pdf">Deanonymizing Tor Hidden Service Users Through Bitcoin Transactions Analysis</a></span></div>
-            <small>
-              Husam Al Jawaheri, Mashael Al Sabah, Yazan Boshmaf, and Aiman Erbad
-              <div class=ref><i>Elsevier Computers &amp; Security</i><br>
-              Volume 89, Article 101684, Feb 2020</div>
-            </small>
-          </p>
-        </li>
+      <li id="8">
+        <p>
+        <div><span class="pdf"><a
+              href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43862.pdf">Thwarting
+              Fake OSN Accounts by Predicting their Victims</a></span></div>
+        <small>
+          Yazan Boshmaf, Matei Ripeanu, Konstantin Beznosov, and Elizeu Santos-Neto
+          <div class=ref><i>Proc. 8th ACM Workshop on Artificial Intelligence and Security</i><br>
+            AI-Sec &rsquo;15, Denver, CO, Oct 2015</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="11">
-          <p>
-            <div><span class="pdf"><a href="https://arxiv.org/pdf/1809.06044">BlockTag: Design and Applications of a Tagging System for Blockchain Analysis</a></span></div>
-            <small>
-              Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
-              <div class=ref><i>Proc. of 34th International Conference on ICT Systems Security and Privacy Protection</i><br>
-              IFIP SEC &rsquo;19, Lisbon, Portugal, Jun 2019</div>
-            </small>
-          </p>
-        </li>
+      <li id="9">
+        <p>
+        <div><span class="pdf"><a
+              href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45557.pdf">Harvesting
+              the Low-Hanging Fruits: Defending Against Automated Large-Scale Cyber-Intrusions by Focusing on the
+              Vulnerable Population</a></span></div>
+        <small>
+          Hassan Halawa, Konstantin Beznosov, Yazan Boshmaf, Baris Coskun, Elizeu Santos-Neto, and Matei Ripeanu
+          <div class=ref><i>Proc. of 2016 New Security Paradigms Workshop</i><br>
+            NSPW &rsquo;16, C Lazy U Ranc, CO, Sep 2016</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="12">
-          <p>
-            <div><span class="pdf"><a href="https://arxiv.org/pdf/1907.04002">Characterizing Bitcoin Donations to Open Source Software on GitHub</a></span></div>
-            <small>
-              Yury Zhauniarovich, Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
-              <div class=ref><i>arXiv preprint</i><br>
-              arXiv:1907.04002, Jul 2019</div>
-            </small>
-          </p>
-        </li>
+      <li id="10">
+        <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/1809.06044">BlockTag: Design and Applications of a Tagging
+              System for Blockchain Analysis</a></span></div>
+        <small>
+          Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
+          <div class=ref><i>Proc. of 34th International Conference on ICT Systems Security and Privacy
+              Protection</i><br>
+            IFIP SEC &rsquo;19, Lisbon, Portugal, Jun 2019</div>
+        </small>
+        </p>
+      </li>
 
-        <li id="13">
-          <p>
-            <div><span class="pdf"><a href="https://arxiv.org/pdf/1910.12244">Investigating MMM Ponzi Scheme on Bitcoin</a></span></div>
-           <small>
-             Yazan Boshmaf, Charitha Elvitigala, Husam Al Jawaheri, Primal Wijesekera, and Mashael Al Sabah
-             <div class=ref><i>Proc. of 15th ACM Asia Conference on Computer and Communications Security</i><br>
-             AsiaCCS &rsquo;20, Taipei, Taiwan, Oct 2020</div>
-           </small>
-          </p>
-        </li>
+      <li id="11">
+        <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/1907.04002">Characterizing Bitcoin Donations to Open
+              Source Software on GitHub</a></span></div>
+        <small>
+          Yury Zhauniarovich, Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
+          <div class=ref><i>arXiv preprint</i><br>
+            arXiv:1907.04002, Jul 2019</div>
+        </small>
+        </p>
+      </li>
 
-      </ol>
-      
+      <li id="12">
+        <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/1801.07501.pdf">Deanonymizing Tor Hidden Service Users
+              Through Bitcoin Transactions Analysis</a></span></div>
+        <small>
+          Husam Al Jawaheri, Mashael Al Sabah, Yazan Boshmaf, and Aiman Erbad
+          <div class=ref><i>Elsevier Computers &amp; Security</i><br>
+            Volume 89, Article 101684, Feb 2020</div>
+        </small>
+        </p>
+      </li>
+
+      <li id="13">
+        <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/1910.12244">Investigating MMM Ponzi Scheme on
+              Bitcoin</a></span></div>
+        <small>
+          Yazan Boshmaf, Charitha Elvitigala, Husam Al Jawaheri, Primal Wijesekera, and Mashael Al Sabah
+          <div class=ref><i>Proc. of 15th ACM Asia Conference on Computer and Communications Security</i><br>
+            AsiaCCS &rsquo;20, Taipei, Taiwan, Oct 2020</div>
+        </small>
+        </p>
+      </li>
+
+    </ol>
+
     </p>
   </div>
 
 </body>
+
 </html>
