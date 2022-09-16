@@ -32,8 +32,8 @@
         technology, such as the World Wide Web (a.k.a. the Web), play a pivotal role in advancing today's
         knowledge-based societies and should be protected at all costs. My research revolves around the security and
         privacy of the Web, with an emphasis on problems that impact the way we adopt and use its underlying
-        technologies. My ultimate goal is to empower Web users by building software systems that give users full control
-        of their data, are resilient to centralized control, and offer higher levels of privacy and security.</em></p>
+        technologies. My ultimate goal is to empower Web users by building software systems that are resilient to centralized control, give users full control
+        of their data, and offer higher levels of privacy and security.</em></p>
 
     <div class="title">Background</div>
     <p>One characteristic of the Information Age is that our society is surrounded by a high-tech global economy in
@@ -161,32 +161,29 @@
 
     <div style="text-align: center;">
       <img src="img/toshi.png" alt="Toshi's high-level architecture" style="width:620px;" />
-      <br><span><b>Figure 3.</b> Toshi's high-level architecture</span>
+      <br><span><b>Figure 3.</b> CIBR's high-level architecture</span>
     </div>
 
-    <p>In 2017, to better understand how decentralized systems like Bitcoin affect the way we use the Web, I started
-      looking at ways to link off-chain data (e.g., a Twitter account) to on-chain data (e.g., a Bitcoin address),
-      focusing on applications related to privacy research and law enforcement. Existing blockchain analysis systems,
-      such as BlockSci, focus on efficiently analyzing on-chain data, with no or limited support for auxiliary data. To
-      address this limitation, I am currently building and improving Toshi: A full-stack search, tagging, and
-      analysis system for blockchains [<a href="#10">10</a>]. The challenge is to find a way to
-      systematically incorporate auxiliary data into the
-      blockchain so that a new class of queries, which involve clustering, linking, and searching on/off-chain data, can
-      be performed using existing analysis systems. Toshi addresses this challenge by annotating on-chain data with
+    <p>In 2017, to better understand how decentralized systems like Bitcoin affect the way we use the Web, I started a new
+      focused effort called <a href="https://cibr.qcri.org" target="_blank">Cybersecurity Initiative for Blockchain Research (CIBR)</a>,
+      and kicked off the research by looking at ways to link off-chain data (e.g., a Twitter account) to on-chain data 
+      (e.g., a Bitcoin address), focusing on applications related to privacy research and law enforcement. Existing blockchain 
+      analysis systems, such as BlockSci, focus on efficiently analyzing on-chain data, with no or limited support for auxiliary data. To
+      address this limitation, I am currently building and improving CIBR-Lab: A full-stack search, tagging, classification, and
+      analysis system for blockchains [<a href="#10">10</a>,<a href="#11">11</a>]. The challenge is to find a way to systematically incorporate auxiliary data into the
+      blockchain so that a new class of queries, which involve clustering, linking, classifying, and searching on/off-chain data, can
+      be performed using existing analysis systems. CIBR-Lab addresses this challenge by annotating on-chain data with
       tags, which are auxiliary, off-chain data crawled from the Web and other information networks, such as Tor. These
-      tags are managed separately from the analysis sub-system as annotations, which can be clustered, linked, and
-      searched
-      through blockchain transactions. To simplify blockchain analysis, Toshi separates functionality by defining a
+      tags are managed separately from the analysis sub-system as annotations, which can be clustered, linked, classified, and
+      searched through blockchain transactions. To simplify blockchain analysis, CIBR-Lab separates functionality by defining a
       component-based, layered system architecture (i.e., a stack), where blockchain, data management, annotation, and
-      analytics have separate
-      component with
-      well-defined and extendable interfaces between them. This allows Toshi to provide quick, partial answers to
-      high-level queries like: "which Twitter accounts made Bitcoin payments to Silk Road."</p>
+      analytics have separate component with well-defined and extendable interfaces between them. This allows CIBR-Lab to provide quick, 
+      partial answers to high-level queries like: "which Twitter accounts made Bitcoin payments to Silk Road."</p>
 
     <p>As a proof of concept, we deployed Toshi in 2019 to investigate emerging security and privacy issues arising from 
       analyzing off/on-chain data of popular technologies. In particular, we showed that one can deanonymize Tor hidden 
-      service users [<a href="#11">11</a>], uncover Ponzi schemes on Bitcoin [<a href="#12">12</a>], and identify users 
-      who made donations to open-source projects on GitHub[<a href="#13">13</a>]. My ongoing work with Toshi has led 
+      service users [<a href="#12">12</a>], uncover Ponzi schemes on Bitcoin [<a href="#13">13</a>], and identify users 
+      who made donations to open-source projects on GitHub[<a href="#14">14</a>]. My ongoing work with Toshi has led 
       to a private presentation to The Office of Technology Research and Investigation at the U.S. Federal Trade Commission, 
       multi-year, multi-million dollar research grants from Qatar National Research Fund, and an international news 
       coverage.</p>
@@ -332,6 +329,17 @@
               System for Blockchain Analysis</a></span></div>
         <small>
           Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
+          <div class=ref><i>arXiv preprint</i><br>
+            arXiv:2209.07202, Sep 2022</div>
+        </small>
+        </p>
+      </li>
+
+      <li id="11">
+        <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/2209.07202.pdf">Dizzy: Large-Scale Crawling and Analysis of Onion Services</a></span></div>
+        <small>
+          Isuranga Perera and Yazan Boshmaf
           <div class=ref><i>Proc. of 34th International Conference on ICT Systems Security and Privacy
               Protection</i><br>
             IFIP SEC &rsquo;19, Lisbon, Portugal, Jun 2019</div>
@@ -339,7 +347,7 @@
         </p>
       </li>
 
-      <li id="11">
+      <li id="12">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1801.07501.pdf">Deanonymizing Tor Hidden Service Users
               Through Bitcoin Transactions Analysis</a></span></div>
@@ -351,7 +359,7 @@
         </p>
       </li>
 
-      <li id="12">
+      <li id="13">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1910.12244">Investigating MMM Ponzi Scheme on
               Bitcoin</a></span></div>
@@ -363,7 +371,7 @@
         </p>
       </li>
 
-      <li id="13">
+      <li id="14">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1907.04002">Characterizing Bitcoin Donations 
           to Open Source Software on GitHub</a></span></div>
