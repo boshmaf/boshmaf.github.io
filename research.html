@@ -14,6 +14,7 @@
     .title {
       margin: 5px 0 5px 0;
       font-weight: bold;
+      font-size: 1.2em;
     }
   </style>
 </head>
@@ -23,205 +24,111 @@
   <div class="fore">
 
     <h1>Research Statement</h1>
-    <h5 style="margin-bottom: 0px; margin-top: 5px;">A highly opinionated response to why I do research</h5>
+    <h5 style="margin-bottom: 0px; margin-top: 2px; font-size: 1.1em; font-style: italic; font-weight: normal;">
+      Security and Governance for AI Systems that Act in the World
+    </h5>
+    <div style="margin-bottom: 10px; margin-top: 10px; font-size: 0.9em; color: #666;">
+      Last updated: Sept 19, 2026
+    </div>
     <h2><a href="index.html">&laquo;&nbsp;Home</a></h2>
     <div class=spacer></div>
 
     <p class="indent">
-    <p style="padding: 16px 38px;"><em><b>Summary.</b> We live in the Information Age. Innovations in information
-        technology, such as the World Wide Web (a.k.a. the Web), play a pivotal role in advancing today's
-        knowledge-based societies and should be protected at all costs. My research revolves around the security and
-        privacy of the Web, with an emphasis on problems that impact the way we adopt and use its underlying
-        technologies. My ultimate goal is to empower Web users by building software systems that are resilient to centralized control, give users full control
-        of their data, and offer higher levels of privacy and security.</em></p>
+    <p style="padding: 16px 38px;"><b>Research vision.</b> My research asks how society can delegate consequential decisions and 
+      actions to complex software without surrendering the ability to verify, constrain, and correct it. I began with automated 
+      accounts on the social Web, moved to distributed and decentralised systems, and now study artificial intelligence systems 
+      that generate content, invoke tools, and coordinate with other agents. The technical objects have changed, but the security 
+      question has remained stable: <em>when a system mediates human knowledge and agency, what evidence should make us trust it, 
+      and what mechanisms let us intervene when that trust is misplaced?</em> I address this question through AI <b>safety, 
+      security, and privacy (SSP)</b> under an operational view of <b>AI governance</b>. For me, governance is not a checklist added 
+      after a model is built. It is a systems research agenda that connects measurement, certification, policy, runtime 
+      enforcement, observability, incident response, and recertification. My goal is to establish an AI assurance research 
+      programme that develops these foundations and tests them in partnership with researchers, industry, public institutions, 
+      and the people who operate the systems.</p>
 
-    <div class="title">Background</div>
-    <p>One characteristic of the Information Age is that our society is surrounded by a high-tech global economy in
-      which wealth is knowledge and growth is learning. This system of the world leads to a fundamental question about
-      our experience with the Web: When we go online, how do we identify ourselves, connect with others, and gain
-      knowledge?</p>
+    <div class="title">1. From Web Automation to Security under Realistic Adversaries</div>
+      <p>My doctoral research began with the gap between the apparent trustworthiness of the social Web and the weak security assumptions beneath it. I built and carefully operated a network of 100 socialbots to test whether malicious automation could reproduce the behaviours that made a social account appear human. Over eight weeks, the bots achieved infiltration rates of up to 80 percent, collected 250 GB of data associated with more than one million users, and faced detection rates below 20 percent. The work received the ACSAC Outstanding Paper Award [<a href="#1">1</a>,<a href="#2">2</a>] and established an enduring principle for my research: security mechanisms should be evaluated against adversaries that can imitate normal behaviour, not only against convenient anomalies.</p>
 
-    <p>When I started exploring this question in 2010, as part of an early investigation of Web single sign-on [<a
-        href="#1">1</a>], the answer was predominantly "Facebook." True then as it is now, we live in the Facebook Age.
-      We identify ourselves with our Facebook accounts, we connect with others by sending friend requests, and we learn
-      about the world from our newsfeeds. For many, the Web has become Facebook; or Google, Twitter, and the like.
-      Regardless of which “walled garden” we choose to visit, the Web is far distant from its open standard origin.
-      Today’s Web is dominated by a few large websites that use closed, centralized systems. Moreover, most of these
-      websites implement a business model that allows them to be used for free in exchange for user data, which is then
-      used for highly-targeted advertising. Other than treating users as commodities, this “free-to-use” business model
-      is fundamentally flawed. A price of zero greatly reduces liabilities to users, especially privacy and security,
-      incentivizes the use of abusive retention strategies, which profile users and herd them towards sharing more data,
-      and prohibits market learning by hiding pricing signals, which hinders competition and innovation. Yet, the Web
-      seems to work well in practice, does it not? Starting early 2011, I set out to test this proposition, focusing on
-      the privacy and security implications of using large, centralized websites like Facebook.</p>
+      <p>I then turned from attack measurement to defence. Existing fake-account detectors assumed that malicious accounts would remain socially isolated or visibly spammy. Our graph-based analysis, which received the ASONAM Best Paper Award [<a href="#3">3</a>], showed that these assumptions failed once socialbots formed credible ties [<a href="#4">4</a>]. I led the development of <em>Integro</em>, which instead predicted likely victims and incorporated those predictions into an infiltration-resilient ranking scheme. A production evaluation at Tuenti processed a graph of 160 million nodes on 33 commodity machines in under 30 minutes and detected nearly ten times more fake accounts than the deployed baseline. The research appeared at NDSS [<a href="#5">5</a>] and in <em>Computers & Security</em> [<a href="#6">6</a>], contributed to a U.S. patent application, and demonstrated the value of joining adversarial modelling, distributed systems, and deployment evidence.</p>
 
-    <div class="title">The Centralized Web: The Case Against Facebook</div>
-    <p>As Facebook had 500 million monthly active users in 2011, and projecting its first billion within a year, I
-      decided to investigate how feasible it is for an attacker to achieve a seemingly far-fetched goal: To automate,
-      and effectively fake, the whole Facebook experience for many adversarial objectives, such as private data
-      collections and misinformation.</p>
+      <p>These projects shaped three habits that remain central to my work: model the capable adversary; make the security boundary explicit; and validate ideas in the environment where decisions carry costs.</p>
 
-    <div style="text-align: center;">
-      <img src="img/social_botnet.png" alt="Social botnet" style="width:360px;" />
-      <br><span><b>Figure 1.</b> Social botnet</span>
-    </div>
+    <div class="title">2. Distributed Systems, Blockchains, and Accountable Provenance</div>
+      <p>In 2016, I shifted from protecting centralised platforms to studying systems that distribute trust. Socialbots exemplify the Sybil attack: an adversary enters a system under multiple identities and uses them to manipulate its operation. Blockchains address the same underlying challenge from a different architectural direction, combining Sybil-resistant consensus with a durable shared record that does not depend on a single controlling party. To investigate this design space, I founded the Cybersecurity Initiative for Blockchain Research (CIBR) at QCRI and grew it to eight affiliated researchers and engineers.</p>
 
-    <p>After presenting the case for this investigation to The Office of the Privacy Commissioner of Canada, I started
-      designing a Web automation tool called a socialbot. In concept, a socialbot controls a fictitious Facebook account
-      and can perform social activities similar to those of real users, such as sending friend requests and posting
-      messages. As such, a socialbot is designed to deceive and pass itself off as a human being. A network of
-      socialbots can be controlled by an adversary in a command-and-control fashion, similar to malware botnets. For a
-      social botnet to operate at scale, all aspects of its operation must be automated, including account creation,
-      profile setup, befriending, and posting messages. The main challenge is not automation per se, but being able to
-      infiltrate and connect with the rest of the Facebook network. This is the case because successful social
-      infiltration is essential for evaluating privacy and security concerns, as isolated socialbots pose minimal risk
-      to users and are easy to detect. To overcome this challenge, the socialbots are designed to exploit known concepts
-      in sociology, such as targeting users with whom they have mutual friends (i.e., triadic closure), in order to
-      improve their infiltration success rate.</p>
+      <p>The programme joined on-chain transaction structure with off-chain evidence. <em>BlockTag</em>, published at IFIP SEC [<a href="#7">7</a>], introduced an extensible method for attaching auxiliary evidence to blockchain addresses. <em>Dizzy</em>, published at ARES [<a href="#8">8</a>], scaled the collection and analysis of onion services and linked them to blockchain transactions [<a href="#9">9</a>,<a href="#10">10</a>]. With <em>Toshi</em> and <em>Kansa</em>, these ideas became systems used by the Financial and Electronic Crime Combating Unit at Qatar's Ministry of Interior to investigate cryptocurrency fraud and ransomware. The programme contributed to multi-year research projects, patents, international collaborations, and public-interest deployment.</p>
 
-    <p>After consulting with the university’s research ethics board, I carefully operated a network of 100 socialbots on
-      Facebook for eight weeks, resulting in one main finding: With up to 80% infiltration rate, 250GB of raw data
-      collected from more than one million users, and less than 20% detection rate, Facebook and its users are left
-      defenseless [<a href="#2">2</a>,<a href="#3">3</a>]. This was the first comprehensive study that showed the
-      vulnerability of large, centralized online social networks (OSNs) like Facebook to fake, abusive automation, and
-      has received the outstanding paper award at ACSAC '11. It also resulted in a private presentation to the InfoSec
-      Technology Transition Council for the Science & Technology Directorate at the U.S. Department of Homeland
-      Security, in addition to an international news coverage, years before Facebook was formally questioned by the U.S.
-      Senate about its handling of user data, fake news, and political bias in 2018.</p>
+      <p>This phase taught me that provenance is useful only when it supports a decision. A ledger can preserve evidence, but analysts still need defensible methods for linking records, assigning confidence, protecting sensitive data, and explaining conclusions. That insight became the bridge to my current research on generative AI.</p>
 
-    <p>In 2012, shortly after this investigation, I started looking at how OSNs can protect their users from automated
-      fake accounts [<a href="#4">4</a>]. Being closed and centralized, it is not possible to evaluate new defenses
-      against the ones deployed by OSNs in practice, unless researchers find a way to collaborate with these OSNs. Back
-      then, there were two main approaches to detect fake accounts. The first is statistical and relies on detecting
-      anomalies in user behavior using machine learning. The second is mathematical and relies on computing properties
-      of the social graph, which represents users and their friendships, using combinatorics and probability theory. In
-      2013, I showed that both approaches are ineffective against socialbots, as their threat model assumes fake
-      accounts that cannot behave like real users; they must be spammy and relatively isolated from real accounts [<a
-        href="#5">5</a>]. This investigation resulted in the best paper award at ASONAM '13, and highlighted the
-      challenge for designing defense systems that consider a more realistic and resourceful adversary who can operate a
-      social botnet.</p>
+    <div class="title">3. The Bridge to AI Assurance Through Fanar</div>
+      <p>I led the attribution subproject for <em>Fanar</em> [<a href="#11">11</a>], QCRI's Arabic-centric multimodal generative AI platform. Fanar's opt-in post-generation service decomposes an answer into factual claims, retrieves supporting sources, and revises the response so that claims can be checked against cited evidence. It treats attribution as a system component rather than a stylistic request to the language model. In a related direction, <em>TokenX</em> connects attribution with blockchain-based accounting so that publishers can receive compensation when their openly available content supports a model response. This work brought my earlier interests in open information systems, evidence, and decentralised incentives directly into AI.</p>
 
-    <div style="text-align: center;">
-      <img src="img/integro.png" alt="Integro's high-level design" style="width:340px;" />
-      <br><span><b>Figure 2.</b> Integro's high-level design</span>
-    </div>
+      <p>Deployment also changed the research question. A model with attribution can still be poisoned, a benchmark can still give a misleading assurance signal, and an agent can still route untrusted content to a privileged tool. Fanar therefore became both a contribution and a catalyst: building an AI platform made clear that we also needed methods to secure it, audit it, and govern changes across its lifecycle.</p>
 
-    <p>From 2014 to 2015, after studying the human factors affecting social infiltration [<a href="#6">6</a>], I worked
-      on building and improving Integro: A defense system that combines both approaches in a novel,
-      infiltration-resilient user ranking scheme that helps OSNs detect fake accounts [<a href="#7">7</a>,<a
-        href="#8">8</a>]. Integro predicts victims of fake accounts (i.e., potential victims) using supervised machine
-      learning, with features extracted from basic account information. As such, it makes no limiting assumptions about
-      fakes and shifts the focus to real accounts. Integro weights the social graph such that edges incident to
-      potential victims have lower weights than others. It then computes a rank for each account based on the landing
-      probability of a short, modified random walk that starts from a known real account. This walk is biased towards
-      traversing accounts that are reachable through edges with higher weights, which means it is highly unlikely to
-      land on fake accounts and most real accounts will be ranked higher than fake accounts, even if fakes have
-      infiltrated many real accounts.</p>
+    <div class="title">4. Current Research in AI Safety, Security, and Privacy</div>
+      <p>My current programme studies assurance at four connected layers.</p>
 
-    <p>I implemented Integro on top of open-source distributed systems and deployed it at Tuenti, a progressive OSN with
-      millions of users. A production-class evaluation resulted in detecting nearly 10 times more fake accounts than
-      existing defense systems. This was done in under 30 minutes for a social graph with 160 million nodes on 33
-      commodity machines.</p>
+      <p><b>4.1. Models and the AI supply chain</b></p>
+        
+      <p>In <em>Poison with Style</em>, accepted at ICML 2026 [<a href="#12">12</a>], we showed that a developer's coding style can act as a covert trigger in a poisoned code language model. The attack caused the model to emit code with a CWE-20 vulnerability in 95 percent of triggered cases while reducing pass@1 by less than five percentage points on HumanEval and MBPP. The result challenges evaluations that test utility and backdoors separately: an apparently capable model can carry a latent vulnerability activated by ordinary developer behaviour. I am extending this direction toward AI bills of materials, provenance for models and context, and tests that connect a supply-chain claim to an observable security property.</p>
 
-    <p>It is important to highlight that websites should take the initiative and integrate, or at least evaluate, new
-      defense systems against theirs, hopefully before innovation is stifled by new, restrictive Web regulations that
-      are drafted in response to emerging security and privacy concerns. This rings true with the new EU GDPR law put in
-      place and the recent push in the U.S. to regulate high-tech companies.</p>
+      <p><b>4.2. Evaluation as a measurement system</b></p>
+      
+      <p>I co-lead <em>aiXamine</em> [<a href="#13">13</a>], a black-box platform that evaluates trade-offs across LLM safety, security, and privacy. The platform contains more than 45 benchmarks across nine evaluation domains and has run over 5,000 examinations of more than 130 models. The peer-reviewed framework, appearing at RAID 2026, makes cross-dimensional trade-offs visible instead of compressing them into a single score.</p>
+        
+      <p>Our subsequent reliability audit with <em>Sayf-Eval</em> [<a href="#14">14</a>], currently under review, treats a benchmark as a pipeline from dataset and prompt through inference, extraction, scoring, and aggregation. Across eight cybersecurity benchmarks, 48,662 questions, 23 tasks, and ten models, we identified 15 systematic failure modes. One pipeline choice changed a score by more than 80 percentage points; after standardisation, nine of ten models moved at least three ranks on at least one benchmark. This motivates executable reference evaluators and evaluation pipeline cards that record exactly what a score measures.</p>
+      
+      <p>Static benchmarks also saturate and may enter training data. In <em>SSP-Bench</em> [<a href="#15">15</a>], currently under review, we generate fresh, source-grounded items and select them for validity, difficulty, discrimination, novelty, and diversity. Across 24 models and four SSP evaluation domains, the method exposed construct mixing in safety leaderboards and model-family regressions hidden by static scores. This work moves evaluation from repeated benchmark-taking toward measurement science.</p>
 
-    <div class="title">The Decentralized Web: The Case for Bitcoin</div>
-    <p>In 2016, I started exploring how victim prediction can be applied to different Web security problems [<a
-        href="#9">9</a>]. I quickly realized, however, that this approach gives more legitimacy to collecting user data
-      by closed, centralized systems. Moreover, operating “big data silos” will eventually be infeasible, as there will
-      be far more data than a single, centralized system can manage for free.</p>
+      <p><b>4.3. Agentic systems and pre-deployment policy inference</b></p>
+      
+      <p>Agentic applications assemble their attack surface from models, tools, prompts, remote services, and delegations. The resulting interaction graph is usually implicit in source code and incomplete at review time. In <em>AgentSA</em>, currently under review, we developed a framework-independent model of these interactions and a static analyser that reconstructs the graph without importing or executing the application. Across seven real systems, six synthetic benchmarks, and 209 manually audited interactions, the analyser achieved 0.99 precision for recoverable edges and produced 187 authorisation rules plus 57 default-deny rules without manual policy authoring.</p>
+      
+      <p>The next step is to move from recovered topology to least-privilege design: infer candidate access-control policies, identify paths from untrusted inputs to privileged sinks, distinguish statically enforceable edges from runtime-mediated choices, and monitor policy drift as applications evolve across frameworks such as MCP and A2A.</p>
 
-    <p>With this perspective in mind, I revisited the threat of social botnets as an instance of the Sybil attack, which
-      is a well-studied problem in distributed, decentralized identity-based system, such as Peer-to-Peer (P2P)
-      networks. In the Sybil attack, an adversary abuses the system by forging multiple, dishonest identities, each
-      called a Sybil, and joins the system under these identities for malicious objectives. A decentralized, distributed
-      system that is resilient to the Sybil attack is a good candidate for influencing the design of next-generation Web
-      systems. This is when I shifted my focus to Bitcoin and its underlying blockchain technology.</p>
+      <p><b>4.4. People who bear the cost of assurance</b></p>
+      
+      <p>Security controls succeed only if their operational cost is sustainable. An under-review interview study with 20 open-source maintainers examines how AI-generated vulnerability reports weaken the old link between polished presentation and technical validity. Maintainers responded by doing more independent verification and using AI for pre-triage while retaining human responsibility. The study identifies an attention asymmetry: generation becomes cheaper while verification remains expensive. It also shows how reporter-history heuristics can disadvantage newcomers. These findings keep my systems work grounded in human accountability, fair access, and usable evidence.</p>
 
-    <p>Bitcoin is a digital currency that uses a P2P network to move money from one user to another, each represented by
-      a single node in the network, without the need for intermediaries, such as banks. Transactions are verified by
-      loosely-organized nodes called miners and recorded in a public, distributed ledger called a blockchain. The
-      security of the blockchain is established by a chain of cryptographic puzzles that miners compete to solve. Each
-      miner that successfully solves a crypto puzzle is allowed to record a set of transactions, and to collect a reward
-      in Bitcoins. The more mining power (i.e., resources) a miner applies, the better are its chances to solve the
-      puzzle first. This reward structure, also called proof-of-work, provides an incentive for miners to contribute
-      their resources to the system, and is essential to the currency’s decentralized nature.</p>
+    <div class="title">5. Research programme at QCRI</div>
+      <p>In 2025, I started an <em>AI Assurance Programme</em> within the Cybersecurity Group around three mutually reinforcing research thrusts spanning pre-deployment measurement, runtime security, and lifecycle governance. The programme follows a common principle: assurance should be based on explicit, reproducible evidence about what an AI system is expected to do, what authority it possesses, how it behaves, and how that evidence changes after deployment.</p>
+        
+      <p>As explained below, <em>Policy2Bench</em> will translate human and institutional requirements into defensible evaluation programmes; <em>agent interaction property graphs</em> will make authority, provenance, capabilities, and execution visible in agentic systems; and <em>AI governance</em> will connect both forms of evidence to operational decisions.</p>
 
-    <p>The Bitcoin network relies on IP address-based identity. In order to defend against Sybil attackers who attempts
-      to fill the network with dishonest nodes, an honest node only makes an outbound connection to one IP address per
-      /16 subnet (i.e., one IP out of a block of 65 thousand IPs). This reduces the probability of an honest node
-      connecting to peers that are dishonest all the time. To defend against a Sybil attacker who controls miners,
-      consensus in Bitcoin requires the majority of miners in the network to agree on the state of the blockchain. As it
-      is financially infeasible for an adversary to control the majority of the mining power in the network, the
-      security of the blockchain is preserved. This new crypto economy defined by Bitcoin is novel, and is already
-      fueling new blockchain-based Web systems, such as Filecoin for data storage and Steemit for social networking.</p>
+      <p><b>5.1. Measurements that deserve trust</b></p>
 
-    <div style="text-align: center;">
-      <img src="img/cibr-lab.png" alt="CIBR-Labs's high-level architecture" style="width:620px;" />
-      <br><span><b>Figure 3.</b> CIBR's high-level architecture</span>
-    </div>
+      <p>AI benchmarks often answer a precisely formulated question that is only loosely connected to the decision an organisation must make. A prospective adopter rarely begins with a benchmark name or a fully specified construct. The initial requirement is more likely to be "select a safe model for a multilingual public-service agent" or "identify the model that best supports our privacy obligations." Existing dynamic benchmarks can refresh test content, but they generally assume that the construct to be measured is already known.</p>
 
-    <p>In 2017, to better understand how decentralized systems like Bitcoin affect the way we use the Web, I started a new
-      focused effort called <a href="https://cibr.qcri.org" target="_blank">Cybersecurity Initiative for Blockchain Research (CIBR)</a>,
-      and kicked off the research by looking at ways to link off-chain data (e.g., a Twitter account) to on-chain data 
-      (e.g., a Bitcoin address), focusing on applications related to privacy research and law enforcement. Existing blockchain 
-      analysis systems, such as BlockSci, focus on efficiently analyzing on-chain data, with no or limited support for auxiliary data. To
-      address this limitation, I am currently building and improving CIBR-Lab: A full-stack search, tagging, classification, and
-      analysis system for blockchains [<a href="#10">10</a>,<a href="#11">11</a>]. The challenge is to find a way to systematically incorporate auxiliary data into the
-      blockchain so that a new class of queries, which involve clustering, linking, classifying, and searching on/off-chain data, can
-      be performed using existing analysis systems. CIBR-Lab addresses this challenge by annotating on-chain data with
-      tags, which are auxiliary, off-chain data crawled from the Web and other information networks, such as Tor. These
-      tags are managed separately from the analysis sub-system as annotations, which can be clustered, linked, classified, and
-      searched through blockchain transactions. To simplify blockchain analysis, CIBR-Lab separates functionality by defining a
-      component-based, layered system architecture (i.e., a stack), where blockchain, data management, annotation, and
-      analytics have separate component with well-defined and extendable interfaces between them. This allows CIBR-Lab to provide quick, 
-      partial answers to high-level queries like: "which Twitter accounts made Bitcoin payments to Silk Road."</p>
+      <p>Building on <em>aiXamine</em>, <em>SSP-Bench</em>, and <em>Sayf-Eval</em>, I will develop <em>Policy2Bench</em>, a compiler from vague model-selection requirements to auditable, grounded, dynamically generated LLM evaluations. It will transform a natural-language requirement into a typed representation and then select a sparse set of versioned <em>policy atoms</em>. Each atom will specify its scope, applicability, desired and prohibited behaviours, evidence requirements, test archetypes, scoring contract, provenance, and validity period. The compiler will use authoritative sources and explicit precedence rules to generate an evidence plan, synthesize source-grounded test items, independently derive their expected answers or rubrics, and freeze the complete inference, parsing, scoring, and aggregation pipeline.</p>
 
-    <p>As a proof of concept, we deployed CIBR-Lab in 2019 to investigate emerging security and privacy issues arising from 
-      analyzing off/on-chain data of popular technologies. In particular, we showed that one can deanonymize Tor hidden 
-      service users [<a href="#12">12</a>], uncover Ponzi schemes on Bitcoin [<a href="#13">13</a>], and identify users 
-      who made donations to open-source projects on GitHub[<a href="#14">14</a>]. My ongoing work with CIBR-Lab has led 
-      to a private presentation to The Office of Technology Research and Investigation at the U.S. Federal Trade Commission, 
-      multi-year, multi-million dollar research grants from Qatar National Research Fund, and an international news 
-      coverage.</p>
+      <p>An essential contribution will be to identify the boundary of behavioural evaluation. A model test may assess privacy-sensitive behaviour, abstention, or understanding of data-protection principles; it cannot establish an organisation's lawful basis, contractual controls, retention practices, or regulatory compliance. <em>Policy2Bench</em> will therefore produce two linked outputs: an executable benchmark for model-testable requirements and a separate evidence checklist for deployment, vendor, legal, and organisational claims. This prevents a behavioural score from being misrepresented as a compliance certificate (e.g., complying with GDPR regulations).</p>
 
-    <div class="title">Moving Forward: Towards a Private, Secure, and Decentralized Web</div>
-    <p>For the short term, I plan to continue working on CIBR-Lab, focusing on fraud detection and transaction risk
-      predictoin. I then plan to deploy CIBR-Lab as an interactive blockchain analytics service, with dashboards displaying 
-      real-time results of important, user-defined queries. Based on feedback from the U.S. Federal Trade Commission 
-      and Qatar Financial Center Regulatory Authority, such capabilities are extremely helpful to protect customers, 
-      comply with Know Your Customer and Anti-Money Laundering laws, and draft new, investor-friendly cryptocurrency 
-      regulations.</p>
+      <p>The scientific questions concern construct validity as much as generation quality. Can policy atoms faithfully capture the measurement semantics of existing benchmarks? Can an underspecified requirement be mapped to a smaller and more complete evaluation programme than retrieval or direct generation? Can the system recognise requirements that are not benchmarkable? Do dynamically generated suites remain attributable, contamination-resistant, discriminating, and stable enough to support a selection decision? Outputs will include an open policy library, requirement corpus, source registry, benchmark compiler, versioned evaluation specifications, and statistical methods for reporting uncertainty, trade-offs, and ranking stability.</p>
 
-    <p>For the longer term, I plan to analyze the privacy and security of general-purpose, decentralized Internet
-      platforms, such as Ethereum, EOS, and IPFS, which are currently used to build next-generation websites in the new
-      Web, or Web 3.0. As users
-      should have the freedom to choose where their data is stored and who is allowed to access it, I plan to focus on
-      achieving true data ownership on the Web. One future direction is to decouple Web data from its applications, with
-      mapping information residing on a public, permissioned blockchain. As such, a Web browser acts as a decentralized
-      content explorer that executes user-defined, self-contained, tokenized applications. This also allows both
-      versions of the Web to co-exist, with current centralized websites acting as both content and application
-      providers.</p>
+      <p><b>5.2. Secure architectures for agentic AI</b></p>
+
+      <p>Agentic applications combine models, tools, prompts, memory, remote services, users, and delegated tasks. They should therefore be treated as dynamically composed security principals, not merely as LLM wrappers. Building on <em>AgentSA</em>'s pre-deployment recovery of agent interaction graphs and authorisation rules, I will develop <em>Agent Interaction Property Graphs (AIPGs)</em>: a framework-independent, temporal, and evidence-bearing representation of agentic software.</p>
+
+      <p>An AIPG will combine four complementary views. A deployment and identity plane will represent agents, users, workloads, hosts, models, credentials, and administrative ownership. A capability plane will over-approximate which agents, tools, resources, and external services are reachable. An authorisation plane will record why an action is permitted and how task-scoped authority is delegated or attenuated. An execution and provenance plane will record what actually occurred and which inputs, messages, agents, and tool invocations influenced an external effect. Graph edges will carry their source, collection method, confidence, freshness, signature, and administrative domain so that a policy can distinguish declared, observed, bilaterally confirmed, attested, and inferred facts.</p>
+
+      <p>The first stage will construct these graphs from source code, configuration, deployment manifests, identity policies, framework hooks, and telemetry from protocols such as MCP, A2A, and AG-UI. The second will address systems that cross organisational boundaries. Rather than disclosing complete internal topologies, independently administered applications will exchange signed, freshness-aware graph assertions or minimal path evidence sufficient to answer a security question. This creates research problems in attestation, revocation, Byzantine behaviour, topology privacy, selective disclosure, and the consistency of partial graph views.</p>
+
+      <p>The third stage, <em>GraphGuard</em>, will use independent reference monitors to enforce graph-grounded policies outside the LLM. Such policies can detect a path from attacker-controlled content to a privileged write, verify that authority narrows across delegation, identify confused-deputy behaviour, estimate the blast radius of a compromised agent, constrain cross-domain information flows, and detect execution edges absent from the declared architecture. Enforcement may deny or attenuate an action, require additional authorisation, redirect it to a safer tool, sandbox it, or quarantine a compromised component. The central research question is whether combining identity, authority, provenance, reachability, and execution enables protection against compositional attacks that remain invisible to prompt filters, tool allowlists, or local traces.</p>
+
+      <p><b>5.3. Governance as an operating system for assurance</b></p>
+
+      <p>The first two thrusts provide complementary evidence. <em>Policy2Bench</em> determines what should be evaluated before deployment and produces a versioned, policy-specific assurance profile. <em>AIPGs</em> and <em>GraphGuard</em> determine what authority and influence exist in the deployed system and enable runtime controls over consequential actions. I will connect them through <em>AI governance</em>: a lifecycle governance architecture spanning registration, pre-deployment certification, policy-as-code, local enforcement, privacy-preserving telemetry, incident response, and recertification.</p>
+
+      <p>The architecture will separate a governance control plane from integration and data planes. Organisations will retain custody of sensitive prompts, outputs, and operational data, while local gateways export only the evidence required for an oversight or certification decision. Policies compiled from human requirements will become traceable artefacts: some will produce behavioural tests, others will become runtime graph predicates, and still others will be routed to organisational evidence and human review. Runtime incidents and previously unseen interaction paths will, in turn, trigger new tests, policy revisions, or recertification rather than silently changing the evaluation target.</p>
+
+      <p>This creates a unified research agenda around evidence continuity. When does a model, prompt, tool, policy, or workflow change invalidate prior certification? How can a pre-deployment requirement be traced to a benchmark item, a runtime control, and an incident record? What is the minimum evidence that must cross organisational boundaries? How can logs be made tamper-evident without centralising private data? Blockchains will be used selectively where multiple parties require durable provenance, attribution, or incentive-compatible accounting, not as a default storage layer.</p>
+
+      <p><b>Closing Remarks.</b> Across all three research thrusts above, I will study the human work of assurance: how experts resolve ambiguous requirements, how operators interpret warnings and contest automated decisions, and how verification costs affect maintainers and under-resourced communities. QCRI offers an exceptional environment in which to combine fundamental research with carefully scoped collaborations across industry and the public sector. The programme will publish reusable software, benchmark artefacts, policy representations, and evaluation corpora whenever ethics, confidentiality, licensing, and responsible disclosure permit. The intended outcome is an assurance stack whose measurements are valid, whose controls are enforceable, and whose governance mechanisms help people decide when an AI system deserves authority.</p>
 
     <div class="title">References</div>
     <ol>
 
       <li id="1">
-        <p>
-        <div><span class="pdf"><a href="http://www.nspw.org/2009/proceedings/2010/nspw2010-sun.pdf">A Billion Keys, but
-              Few Locks: The Crisis of Web Single Sign-on</a></span></div>
-        <small>
-          San-Tsai Sun, Yazan Boshmaf, Kirstie Hawkey, and Konstantin Beznosov
-          <div class=ref><i>Proc. of 2010 New Security Paradigms Workshop</i><br>
-            NSPW &rsquo;10, Colonial Inn, Concord, MA, Dec 2010</div>
-        </small>
-        </p>
-      </li>
-
-      <li id="2">
         <p>
         <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/264/files/264.pdf">The Socialbot Network:
               When Bots Socialize for Fame and Money</a></span></div>
@@ -233,7 +140,7 @@
         </p>
       </li>
 
-      <li id="3">
+      <li id="2">
         <p>
         <div><span class="pdf"><a href="http://137.82.84.194/record/277/files/277.pdf">Design and Analysis of a Social
               Botnet</a></span></div>
@@ -245,19 +152,7 @@
         </p>
       </li>
 
-      <li id="4">
-        <p>
-        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/275/files/275.pdf">Key Challenges in
-              Defending against Malicious Socialbots</a></span></div>
-        <small>
-          Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, Matei Ripeanu
-          <div class=ref><i>Proc. of 5th USENIX Workshop on Large-Scale Exploits and Emergent Threats</i><br>
-            LEET &rsquo;12, San Jose, CA, April 2012</div>
-        </small>
-        </p>
-      </li>
-
-      <li id="5">
+      <li id="3">
         <p>
         <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/286/files/ASONAM_2013.pdf">Graph-based Sybil
               Detection in Social and Information Systems</a></span></div>
@@ -270,7 +165,7 @@
         </p>
       </li>
 
-      <li id="6">
+      <li id="4">
         <p>
         <div><span class="pdf"><a
               href="https://www.usenix.org/system/files/conference/soups2014/soups14-paper-rashtian.pdf">To Befriend or
@@ -283,9 +178,9 @@
         </p>
       </li>
 
-      <li id="7">
+      <li id="5">
         <p>
-        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf">Leveraging
+        <div><span class="pdf"><a href="http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf">Íntegro: Leveraging
               Victim Prediction for Robust Fake Account Detection in OSNs</a></span></div>
         <small>
           Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, and Konstantin
@@ -296,34 +191,18 @@
         </p>
       </li>
 
-      <li id="8">
+      <li id="6">
         <p>
-        <div><span class="pdf"><a
-              href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43862.pdf">Thwarting
-              Fake OSN Accounts by Predicting their Victims</a></span></div>
-        <small>
-          Yazan Boshmaf, Matei Ripeanu, Konstantin Beznosov, and Elizeu Santos-Neto
-          <div class=ref><i>Proc. 8th ACM Workshop on Artificial Intelligence and Security</i><br>
-            AI-Sec &rsquo;15, Denver, CO, Oct 2015</div>
-        </small>
+          <div><span class="pdf"><a href="http://www.ece.ubc.ca/~matei/papers/integro16.pdf">Íntegro: Leveraging Victim Prediction for Robust Fake Account Detection in Large Scale OSNs</a></span></div>
+          <small>
+          Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, Konstantin Beznosov, and Hassan Halawa
+          <div class=ref><i>Elsevier Computers and Security</i><br>
+          Volume 61, Pages 142–168, Aug 2016</div>
+          </small>
         </p>
       </li>
 
-      <li id="9">
-        <p>
-        <div><span class="pdf"><a
-              href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45557.pdf">Harvesting
-              the Low-Hanging Fruits: Defending Against Automated Large-Scale Cyber-Intrusions by Focusing on the
-              Vulnerable Population</a></span></div>
-        <small>
-          Hassan Halawa, Konstantin Beznosov, Yazan Boshmaf, Baris Coskun, Elizeu Santos-Neto, and Matei Ripeanu
-          <div class=ref><i>Proc. of 2016 New Security Paradigms Workshop</i><br>
-            NSPW &rsquo;16, C Lazy U Ranc, CO, Sep 2016</div>
-        </small>
-        </p>
-      </li>
-
-      <li id="10">
+      <li id="7">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1809.06044">BlockTag: Design and Applications of a Tagging
               System for Blockchain Analysis</a></span></div>
@@ -336,18 +215,18 @@
         </p>
       </li>
 
-      <li id="11">
+      <li id="8">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/2209.07202.pdf">Dizzy: Large-Scale Crawling and Analysis of Onion Services</a></span></div>
         <small>
           Yazan Boshmaf, Isuranga Perera, Udesh Kumarasinghe, Sajitha Liyanage, and Husam Al Jawaheri
-          <div class=ref><i>arXiv preprint</i><br>
-            arXiv:2209.07202, Sep 2022</div>
+          <div class=ref><i>Proc. of 18th ACM International Conference on Availability, Reliability and Security</i><br>
+            ARES &rsquo;22, Sep 2022</div>
         </small>
         </p>
       </li>
 
-      <li id="12">
+      <li id="9">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1801.07501.pdf">Deanonymizing Tor Hidden Service Users
               Through Bitcoin Transactions Analysis</a></span></div>
@@ -359,7 +238,7 @@
         </p>
       </li>
 
-      <li id="13">
+      <li id="10">
         <p>
         <div><span class="pdf"><a href="https://arxiv.org/pdf/1910.12244">Investigating MMM Ponzi Scheme on
               Bitcoin</a></span></div>
@@ -371,17 +250,48 @@
         </p>
       </li>
 
-      <li id="14">
+      <li id="11">
         <p>
-        <div><span class="pdf"><a href="https://arxiv.org/pdf/1907.04002">Characterizing Bitcoin Donations 
-          to Open Source Software on GitHub</a></span></div>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/2501.13944">Fanar: An Arabic-Centric Multimodal Generative AI Platform</a></span></div>
         <small>
-          Yury Zhauniarovich, Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah
+          Ummar Abbas, Mohammad Shahmeer Ahmad, Firoj Alam, Enes Altinisik, Ehsannedin Asgari, Yazan Boshmaf et al.
           <div class=ref><i>arXiv preprint</i><br>
-            arXiv:1907.04002, Jul 2019</div>
+            arXiv:2501.13944, Jan 2025</div>
+      </small>
+    </li>
+
+    <li id="12">
+      <p>
+        <div><span class="pdf"><a href="https://arxiv.org/pdf/2605.27631">Poison with Style: A Practical Poisoning Attack on Code Large Language Models</a></span></div>
+        <small>
+          Khang Tran, Yazan Boshmaf, Issa Khalil, NhatHai Phan, Ting Yu, and Md Rizwan Parvez 
+          <div class=ref><i>Proc. of 43rd International Conference on Machine Learning</i><br>
+          ICML &rsquo;26, Seoul, South Korea, Jul 2026</div>
         </small>
-        </p>
-      </li>
+      </p>
+    </li>
+
+    <li id="13">
+      <p>
+        <div><span><a href="https://arxiv.org/pdf/2608.20554">aiXamine: Unified Black-Box Evaluation of Cross-Dimensional Trade-offs in LLM Safety, Security, and Privacy</a></span></div>
+          <small>
+            Fatih Deniz, Yazan Boshmaf, Dorde Popovic, and Issa Khalil
+            <div class=ref><i>Proc. of 29th Symposium on Research in Attacks, Intrusions and Defenses</i><br>
+            RAID &rsquo;26, Lancaster, UK, Oct 2026</div>
+          </small>
+      </p>
+    </li>
+
+    <li id="14">
+      <p>
+        <div><span><a href="https://arxiv.org/pdf/2609.08765">Benchmark Scores Are Pipeline-Dependent: A Reliability Audit of Cybersecurity LLM Benchmarks</a></span></div>
+          <small>
+            Aymene Berriche, Cathrine Shalby, Mohannad Alhanahnah, and Yazan Boshmaf
+            <div class=ref><i>arXiv preprint</i><br>
+            arXiv:2609.08765, Sep 2026</div>
+          </small>
+      </p>
+    </li>
 
     </ol>
 
