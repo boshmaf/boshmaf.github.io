@@ -1,0 +1,32 @@
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h2>Email</h2>
+        <div class="copy-row">
+          <a class="email" data-user="{{ site.author.email_user }}" data-domain="{{ site.author.email_domain }}">{{ site.author.email_user }} at {{ site.author.email_domain | replace: ".", " dot " }}</a>
+          <button class="small-btn" type="button" data-copy-email hidden>Copy</button>
+        </div>
+        <p class="muted">Office <span class="phone" data-phone="{{ site.author.phone | join: ' ' }}">+974 445-[four one five five two]</span></p>
+      </div>
+      <div>
+        <h2>Office</h2>
+        <p>{{ site.author.office | join: "<br>" }}</p>
+      </div>
+      <div>
+        <h2>Elsewhere</h2>
+        <ul class="links">
+          <li><a href="{{ site.author.scholar }}">Google Scholar</a></li>
+          <li><a href="{{ site.author.dblp }}">dblp</a></li>
+          <li><a href="{{ site.author.linkedin }}">LinkedIn</a></li>
+          <li><a href="{{ site.author.twitter }}">X / Twitter</a></li>
+          <li><a href="{{ '/feed.xml' | relative_url }}">News feed (Atom)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="colophon mono">
+      <span>Static site on GitHub Pages. No cookies, no tracking.</span>
+      <span>Updated {{ site.time | date: "%b %Y" }}</span>
+    </div>
+  </div>
+</footer>

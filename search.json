@@ -1,0 +1,17 @@
+---
+layout: null
+---
+[
+  {% for item in site.nav %}{ "k": "Page", "t": {{ item.title | jsonify }}, "u": {{ item.url | relative_url | jsonify }} },
+  {% endfor %}{ "k": "Page", "t": "Home", "u": {{ "/" | relative_url | jsonify }} },
+  { "k": "File", "t": "CV (PDF)", "u": {{ site.author.cv | relative_url | jsonify }} },
+  { "k": "Page", "t": "Contact", "u": {{ "/#contact" | relative_url | jsonify }} },
+  { "k": "Section", "t": "1. From Web Automation to Security under Realistic Adversaries", "x": "socialbots integro sybil", "u": {{ "/research.html#s1" | relative_url | jsonify }} },
+  { "k": "Section", "t": "2. Distributed Systems, Blockchains, and Accountable Provenance", "x": "CIBR blocktag dizzy bitcoin", "u": {{ "/research.html#s2" | relative_url | jsonify }} },
+  { "k": "Section", "t": "3. The Bridge to AI Assurance Through Fanar", "x": "attribution tokenx", "u": {{ "/research.html#s3" | relative_url | jsonify }} },
+  { "k": "Section", "t": "4. Current Research in AI Safety, Security, and Privacy", "x": "poisoning aixamine ssp-bench agentsa evaluation agents", "u": {{ "/research.html#s4" | relative_url | jsonify }} },
+  { "k": "Section", "t": "5. Research programme at QCRI", "x": "policy2bench aipg graphguard governance", "u": {{ "/research.html#s5" | relative_url | jsonify }} },
+  {% for p in site.data.pubs %}{ "k": {{ p.short | jsonify }}, "t": {{ p.title | jsonify }}, "x": {{ p.authors | append: " " | append: p.venue | append: " " | append: p.year | jsonify }}, "u": {{ p.url | jsonify }} },
+  {% endfor %}{% for n in site.data.news %}{% for item in n.items %}{ "k": {{ n.date | append: "-01" | date: "%b %Y" | jsonify }}, "t": {{ item | markdownify | strip_html | strip | jsonify }}, "u": {{ n.date | slice: 0, 4 | prepend: "/news.html#y" | relative_url | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

@@ -1,0 +1,47 @@
+title: Yazan Boshmaf
+description: >-
+  Senior Research Scientist at QCRI, HBKU, working on AI safety, security,
+  privacy and governance for AI systems that act in the world.
+url: https://yazan.boshmaf.com
+baseurl: ""
+lang: en
+
+author:
+  name: Yazan Boshmaf
+  tagline: Researcher, writer, developer, and hacker.
+  job_title: Senior Research Scientist
+  affiliation: Qatar Computing Research Institute, HBKU
+  email_user: yboshmaf
+  email_domain: hbku.edu.qa
+  phone: ["+974", "445", "41552"]  # assembled by JS to deter scrapers
+  office:
+    - HBKU Research Complex
+    - RC-B1-1190, Room A146
+    - Education City
+    - Doha, Qatar
+  scholar: https://scholar.google.com/citations?user=oDTfXXYAAAAJ
+  dblp: https://dblp.uni-trier.de/pers/hd/b/Boshmaf:Yazan
+  linkedin: https://linkedin.com/in/boshmaf
+  twitter: https://twitter.com/boshmaf
+  github: https://github.com/boshmaf
+  cv: /docs/boshmaf_cv.pdf
+  photo: /img/boshmaf-00.jpg
+
+nav:
+  - { title: Research, url: /research.html }
+  - { title: Publications, url: /pubs.html }
+  - { title: News, url: /news.html }
+  - { title: Students, url: /students.html }
+
+# Homepage shows this many news entries (months)
+home_news: 4
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .github

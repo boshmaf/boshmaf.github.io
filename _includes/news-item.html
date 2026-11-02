@@ -1,0 +1,7 @@
+{%- assign n = include.entry -%}
+<li{% if n.award %} class="award"{% endif %}>
+  <time datetime="{{ n.date }}">{{ n.date | append: "-01" | date: "%b %Y" }}</time>
+  {%- for item in n.items %}
+  <p>{{ item | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  {%- endfor %}
+</li>
