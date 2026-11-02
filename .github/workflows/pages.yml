@@ -28,6 +28,13 @@ jobs:
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Write Markdown versions for agents
+        run: |
+          pip install -r _scripts/requirements.txt
+          python _scripts/agent_markdown.py _site
       - uses: actions/upload-pages-artifact@v3
 
   deploy:

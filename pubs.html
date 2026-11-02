@@ -28,3 +28,27 @@ lede: Everything I've published, newest first. Filter by topic or search by titl
   {%- endfor %}
 </ul>
 <p class="empty" id="pubs-empty" hidden>No papers match. Clear the filter to see them all.</p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ site.author.name | append: "'s publications" | jsonify }},
+  "numberOfItems": {{ site.data.pubs | size }},
+  "itemListElement": [
+    {%- for p in site.data.pubs %}
+    {%- assign names = p.authors | replace: ", and ", ", " | replace: " and ", ", " | remove: " et al." | split: ", " %}
+    { "@type": "ListItem", "position": {{ forloop.index }}, "item": {
+      "@type": "ScholarlyArticle",
+      "name": {{ p.title | jsonify }},
+      "headline": {{ p.title | jsonify }},
+      "author": [{% for n in names %}{% if n == site.author.name %}{ "@id": {{ '/#me' | absolute_url | jsonify }} }{% else %}{ "@type": "Person", "name": {{ n | jsonify }} }{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "datePublished": "{{ p.year }}-{% if p.month < 10 %}0{% endif %}{{ p.month }}",
+      "isPartOf": { "@type": "CreativeWork", "name": {{ p.venue | jsonify }} },
+      "url": {{ p.url | jsonify }}{% if p.award %},
+      "award": {{ p.award | jsonify }}{% endif %}
+    } }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

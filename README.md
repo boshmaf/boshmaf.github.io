@@ -17,6 +17,24 @@ by the workflow in `.github/workflows/pages.yml`.
 The search index (`search.json`), Atom feed (`feed.xml`) and `sitemap.xml` are
 generated from the same data on every build.
 
+## For AI agents
+
+- `robots.txt` allows all crawlers and declares
+  [Content Signals](https://contentsignals.org): search and AI answers yes,
+  AI training no.
+- `llms.txt` is the agent-facing index of the site; edit its summary there.
+- Every page gets a Markdown twin (`research.html` → `research.md`) and
+  `llms-full.txt` holds them all. The deploy workflow builds these with
+  `_scripts/agent_markdown.py` after Jekyll runs, so they don't appear under
+  `jekyll serve`. To try it locally:
+  `pip install -r _scripts/requirements.txt`, then
+  `python _scripts/agent_markdown.py _site` after `bundle exec jekyll build`.
+- `pubs.json` and `news.json` expose the raw data; the publications page also
+  carries schema.org `ScholarlyArticle` data.
+- `assets/js/webmcp.js` offers read-only [WebMCP](https://github.com/webmachinelearning/webmcp)
+  tools (search publications, BibTeX, news, contact) to browser AI agents.
+  Browsers without WebMCP ignore it.
+
 ## Run locally
 
 Optional: pushing to `main` builds and deploys the site without any local

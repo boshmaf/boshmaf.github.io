@@ -1,0 +1,29 @@
+---
+layout: null
+---
+# {{ site.author.name }}
+
+> {{ site.description | strip_newlines }}
+
+{{ site.author.name }} is a {{ site.author.job_title }} at the {{ site.author.affiliation }}, and Co-Founder and Director of MenaML, with a PhD in Electrical and Computer Engineering from the University of British Columbia. The research treats AI assurance as a systems problem: trustworthy LLM evaluation, secure agentic systems (agent interaction graphs, least-privilege authorisation, runtime policy enforcement), AI supply-chain security, and lifecycle AI governance. Earlier work covers socialbots and Sybil detection, blockchain analytics and dark web measurement.
+
+Every page below is also available as Markdown. Contact details are on each page.
+
+## Pages
+
+- [Home]({{ '/index.md' | absolute_url }}): bio, recent news, research thrusts, systems and selected publications
+- [Research statement]({{ '/research.md' | absolute_url }}): research vision, past work and the AI Assurance Programme at QCRI, with references
+- [Publications]({{ '/pubs.md' | absolute_url }}): all {{ site.data.pubs | size }} papers, newest first, with venues and links
+- [News]({{ '/news.md' | absolute_url }}): talks, travel, service and awards
+- [Students]({{ '/students.md' | absolute_url }}): reading list for new researchers and how to ask about mentorship
+
+## Data
+
+- [Publications (JSON)]({{ '/pubs.json' | absolute_url }}): title, authors, year, venue, link and topics for every paper
+- [News (JSON)]({{ '/news.json' | absolute_url }}) and [Atom feed]({{ '/feed.xml' | absolute_url }})
+- [CV (PDF)]({{ site.author.cv | absolute_url }})
+
+## Optional
+
+- [Full site in one file]({{ '/llms-full.txt' | absolute_url }})
+- [Google Scholar]({{ site.author.scholar }}), [dblp]({{ site.author.dblp }}), [LinkedIn]({{ site.author.linkedin }}), [GitHub]({{ site.author.github }})

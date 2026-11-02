@@ -1,7 +1,10 @@
 ---
 layout: null
 ---
+# Content Signals (https://contentsignals.org): search engines and AI
+# answers may use this site; training AI models on it is not permitted.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 
 Sitemap: {{ '/sitemap.xml' | absolute_url }}

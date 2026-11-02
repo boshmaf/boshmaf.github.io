@@ -80,18 +80,19 @@
     apply();
   }
 
-  // BibTeX copy
+  // BibTeX copy (also used by webmcp.js)
+  const bibtex = d => {
+    const first = d.authors.split(",")[0].trim().split(" ").pop().toLowerCase().replace(/[^a-z]/g, "");
+    const word = d.title.split(/[\s:]+/).find(w => w.length > 3) || "paper";
+    const key = first + d.year + word.toLowerCase().replace(/[^a-z]/g, "");
+    const authors = d.authors.replace(/ et al\.?$/, " and others").replace(/,? and /g, ", ").split(/,\s*/).join(" and ");
+    const where = d.type === "article" ? "journal" : "booktitle";
+    return `@${d.type}{${key},\n  title = {${d.title}},\n  author = {${authors}},\n  ${where} = {${d.venue}},\n  year = {${d.year}},\n  url = {${d.url}}\n}`;
+  };
+  window.__bibtex = bibtex;
   $$("button.bib").forEach(b => {
     b.hidden = false;
-    b.addEventListener("click", () => {
-      const d = b.dataset;
-      const first = d.authors.split(",")[0].trim().split(" ").pop().toLowerCase().replace(/[^a-z]/g, "");
-      const word = d.title.split(/[\s:]+/).find(w => w.length > 3) || "paper";
-      const key = first + d.year + word.toLowerCase().replace(/[^a-z]/g, "");
-      const authors = d.authors.replace(/ et al\.?$/, " and others").replace(/,? and /g, ", ").split(/,\s*/).join(" and ");
-      const where = d.type === "article" ? "journal" : "booktitle";
-      copy(`@${d.type}{${key},\n  title = {${d.title}},\n  author = {${authors}},\n  ${where} = {${d.venue}},\n  year = {${d.year}},\n  url = {${d.url}}\n}`, "BibTeX");
-    });
+    b.addEventListener("click", () => copy(bibtex(b.dataset), "BibTeX"));
   });
 
   // Research statement: highlight the section in view
