@@ -20,10 +20,10 @@ description: Yazan Boshmaf is a Senior Research Scientist at QCRI, HBKU, working
       </div>
     </div>
     <figure class="graph-card">
-      <canvas id="graph" role="img" aria-label="Animated agent interaction graph. A policy monitor blocks a path from untrusted web content to a privileged shell tool."></canvas>
+      <canvas id="graph" role="img" aria-label="Animated agent interaction graph. The agent queries a search tool, whose result from the untrusted web comes back tainted and taints the agent's context. When the agent then calls a privileged shell tool with that data, a policy check outside the agent denies the call: untrusted to privileged. Trusted calls to the shell tool pass the same check."></canvas>
       <figcaption class="mono">
         <span>Agent interaction graph</span>
-        <span class="legend"><span><i></i>allowed</span><span><i class="b"></i>blocked by policy</span></span>
+        <span class="legend"><span><i></i>trusted data</span><span><i class="b"></i>tainted by untrusted input</span></span>
       </figcaption>
     </figure>
   </div>
