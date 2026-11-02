@@ -1,0 +1,152 @@
+# News, newest first. `items` are Markdown. The homepage shows the first few entries.
+
+- date: 2026-10
+  items:
+    - "I'm speaking as a panelist at [GT-Q](https://www.qatar.georgetown.edu/) on Technology, Trust, and Policy."
+    - "I'm attending [RAID 2026](https://raid2026.org/). See you in Lancaster!"
+
+- date: 2026-04
+  award: true
+  items:
+    - "Our research on combating financial crime was awarded the [Prince Naif Prize](http://www.princenaifprize.com/)."
+
+- date: 2026-01
+  items:
+    - "I'm attending [MenaML Winter School 2026](https://www.mena.ml/). See you in Jeddah!"
+
+- date: 2025-12
+  items:
+    - "I'm attending [World Summit AI 2025](https://qatar.worldsummit.ai/). See you in Doha!"
+
+- date: 2025-01
+  items:
+    - "I'm attending [MenaML Winter School 2025](https://2025.mena.ml/). See you in Doha!"
+
+- date: 2024-02
+  items:
+    - "I'm attending [Web Summit Qatar 2024](https://qatar.websummit.com/). See you in Doha!"
+
+- date: 2023-10
+  items:
+    - "I'm attending [Al+X Summit 2023](https://www.plusx.ai/2023). See you in Zurich!"
+
+- date: 2023-08
+  items:
+    - "I'm presenting at [ARES 2023](https://www.ares-conference.eu/). See you in Benevento!"
+
+- date: 2022-04
+  items:
+    - "I'm serving on the program committee of [SecMT '22](https://spritz.math.unipd.it/events/2022/ACNS_Workshop/index.html)."
+
+- date: 2021-10
+  items:
+    - "I'm presenting at our 3rd [CIBR Workshop](https://cibr.qcri.org/doc/workshop/3rd_cibr_workshop.pdf). See you at QCRI!"
+    - "I'm giving a talk at [QIIB](https://www.qiib.com.qa/Press/Details/307) about virtual currencies and FinTech."
+
+- date: 2020-10
+  items:
+    - "I'm presenting at [AsiaCCS 2020](https://dl.acm.org/doi/proceedings/10.1145/3320269). See you online!"
+
+- date: 2019-10
+  items:
+    - "I'm attending [IMC 2019](https://conferences.sigcomm.org/imc/2019/). See you in Amsterdam!"
+    - "I'm speaking as a panelist at [CSET 2019](http://www.qu.edu.qa/conference/CSET-2019) about Cybersecurity and FinTech."
+
+- date: 2019-09
+  items:
+    - "I'm attending [RAID 2019](https://www.usenix.org/conference/raid2019). See you in Beijing!"
+    - "I'm meeting with folks at [PeckShield](https://peckshield.com) about ongoing CIBR collaboration."
+    - "I'm giving a talk at [Peking University](http://english.pku.edu.cn/) and BUPT about blockchain analytics."
+
+- date: 2019-06
+  items:
+    - "I'm presenting at [IFIP Sec 2019](https://link.springer.com/book/10.1007/978-3-030-22312-0). See you in Lisbon!"
+
+- date: 2019-02
+  items:
+    - "I'm presenting to folks at [PeckShield](https://peckshield.com) about ongoing CIBR research."
+
+- date: 2019-01
+  items:
+    - "I'm leading the new [blockchain research initiative](https://qcri.github.io/cibr) at QCRI."
+
+- date: 2018-10
+  items:
+    - "I'm presenting to teachers of [ASD](https://asd.sch.qa) about blockchain technology."
+
+- date: 2018-06
+  items:
+    - "I'm attending [ACM WiSec 2018](https://wisec18.conf.kth.se). See you in Stockholm!"
+
+- date: 2018-05
+  items:
+    - "I'm presenting at [ACM AsiaCCS 2018](https://dl.acm.org/doi/proceedings/10.1145/3196494). See you in Songdo!"
+
+- date: 2018-04
+  items:
+    - "I'm attending [IEEE ICDE 2018](https://icde2018.org). See you in Paris!"
+
+- date: 2018-03
+  items:
+    - "Our [TÜBİTAK/QNRF](https://qrdi.org.qa/en-US/) grant proposal has been accepted."
+    - "I'm joining the [3rd Cybersecurity Experts Group](https://thepeninsulaqatar.com/article/27/03/2018/Third-Cybersecurity-Experts-Group-meeting-begins) meeting."
+    - "I'm co-presenting our Bitcoin/Tor privacy work at the FTC."
+
+- date: 2018-01
+  items:
+    - "Our work on Bitcoin/Tor privacy has been [covered](https://www.wired.com/story/bitcoin-drug-deals-silk-road-blockchain/) by WIRED."
+    - "I'm speaking at the [6th Katara Tech Forum](http://www.katara.net/en/whats-on/events/Lectures/Katara%20Tech%20Forum/2256) about blockchain technology."
+
+- date: 2017-11
+  items:
+    - "I'm speaking at the 3rd HBKU Roundtable about FinTech and Blockchains."
+
+- date: 2017-09
+  items:
+    - "I'm giving a guest lecture at HBKU ICT Graduate Seminar about Socialbots."
+
+- date: 2017-06
+  items:
+    - "I'm serving on the program committee of [IEEE SPC 2017](http://cns2017.ieee-cns.org/workshop/3rd-workshop-security-and-privacy-cloud-spc)."
+
+- date: 2017-05
+  items:
+    - "I'm attending [IFIP SEC 2017](https://link.springer.com/book/10.1007/978-3-319-58469-0). See you in Rome!"
+
+- date: 2017-02
+  items:
+    - "I'm speaking as a panelist at the 5th HBKU CLPP about the Regulations of Cryptocurrencies."
+
+- date: 2017-01
+  items:
+    - "I'm serving on the judging committee of [NSRC 2017](https://qrdi.org.qa/en-US/)."
+
+- date: 2016-12
+  items:
+    - "I'm reviewing for [IEEE TDSC](https://www.computer.org/csdl/journal/tq)."
+    - "I'm visiting [UBC](http://www.ece.ubc.ca/). See you in Vancouver!"
+
+- date: 2016-11
+  items:
+    - "I'm visiting [UMich](http://security.engin.umich.edu/). See you in Ann Arbor!"
+    - "I'm serving on the poster program committee of [CODASPY 2017](http://www.codaspy.org/)."
+    - "I'm serving on the program committee of [IFIP SEC 2017](https://link.springer.com/book/10.1007/978-3-319-58469-0)."
+    - "I'm reviewing for [ACM TOPS](http://tops.acm.org/)."
+    - "I'm speaking as a panelist at QCB ISCFS 2016."
+
+- date: 2016-10
+  items:
+    - "I'm attending [CCS 2016](https://www.sigsac.org/ccs/CCS2016/). See you in Vienna!"
+
+- date: 2016-09
+  items:
+    - "I'm visiting [UBC](http://www.ece.ubc.ca/). See you in Vancouver!"
+    - "I'm attending [Usenix Sec 2016](https://www.usenix.org/conference/usenixsecurity16). See you in Austin!"
+
+- date: 2016-06
+  items:
+    - "I'm serving on the program committee of [WPES 2016](http://wpes2016.di.unimi.it/)."
+
+- date: 2016-01
+  items:
+    - "I'm serving as the publicity chair of [RAID 2016](http://www.raid2016.org/)."

@@ -1,0 +1,373 @@
+# Publications, newest first. Rendered on /pubs/ and (when selected: true) on the homepage.
+# kind: conference | journal | workshop | preprint   topics: ai, eval, agents, chain, web, systems, mobile
+
+- title: "SSP-Bench: A Hybrid Data Generation Framework for Safety, Security, and Privacy Evaluation"
+  authors: "Fatih Deniz, Yazan Boshmaf, and Issa Khalil"
+  year: 2026
+  month: 9
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:2609.25352, Sep 2026"
+  url: "https://arxiv.org/pdf/2609.25352"
+  topics: [eval]
+
+- title: "Benchmark Scores Are Pipeline-Dependent: A Reliability Audit of Cybersecurity LLM Benchmarks"
+  authors: "Aymene Berriche, Cathrine Shalby, Mohannad Alhanahnah, and Yazan Boshmaf"
+  year: 2026
+  month: 9
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:2609.08765, Sep 2026"
+  url: "https://arxiv.org/pdf/2609.08765"
+  topics: [eval]
+
+- title: "aiXamine: Unified Black-Box Evaluation of Cross-Dimensional Trade-offs in LLM Safety, Security, and Privacy"
+  authors: "Fatih Deniz, Yazan Boshmaf, Dorde Popovic, and Issa Khalil"
+  year: 2026
+  month: 10
+  kind: conference
+  short: "RAID ’26"
+  venue: "Proc. of 29th Symposium on Research in Attacks, Intrusions and Defenses"
+  ref: "RAID ’26, Lancaster, UK, Oct 2026"
+  url: "https://arxiv.org/pdf/2608.20554"
+  topics: [eval, ai]
+  selected: true
+
+- title: "Poison with Style: A Practical Poisoning Attack on Code Large Language Models"
+  authors: "Khang Tran, Yazan Boshmaf, Issa Khalil, NhatHai Phan, Ting Yu, and Md Rizwan Parvez"
+  year: 2026
+  month: 7
+  kind: conference
+  short: "ICML ’26"
+  venue: "Proc. of 43rd International Conference on Machine Learning"
+  ref: "ICML ’26, Seoul, South Korea, Jul 2026"
+  url: "https://arxiv.org/pdf/2605.27631"
+  topics: [ai]
+  selected: true
+
+- title: "CallShield: Secure Caller Authentication over Real-Time Audio Channels"
+  authors: "Mouna Rabhi, Yazan Boshmaf, Mashael Alsabah, Shammur Chowdhury, Mohamed Hefeeda, and Issa Khalil"
+  year: 2026
+  month: 1
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:2601.09327, Jan 2026"
+  url: "https://arxiv.org/pdf/2601.09327"
+  topics: [ai]
+
+- title: "aiXamine: Simplified LLM Safety and Security"
+  authors: "Fatih Deniz, Dorde Popovic, Yazan Boshmaf, Euisuh Jeong, Minhaj Ahmad, Sanjay Chawla, and Issa Khalil"
+  year: 2025
+  month: 4
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:2504.14985, Apr 2025"
+  url: "https://arxiv.org/pdf/2504.14985"
+  topics: [eval, ai]
+
+- title: "Fanar: An Arabic-Centric Multimodal Generative AI Platform"
+  authors: "Ummar Abbas, Mohammad Shahmeer Ahmad, Firoj Alam, Enes Altinisik, Ehsannedin Asgari, Yazan Boshmaf et al."
+  year: 2025
+  month: 1
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:2501.13944, Jan 2025"
+  url: "https://arxiv.org/pdf/2501.13944"
+  topics: [ai]
+
+- title: "SoK: Software Debloating Landscape and Future Directions"
+  authors: "Mohannad Alhanahnah, Yazan Boshmaf, and Ashish Gehani"
+  year: 2024
+  month: 7
+  kind: workshop
+  short: "FEAST ’24"
+  venue: "Proc. of the 2024 Workshop on Forming an Ecosystem Around Software Transformation"
+  ref: "FEAST ’24, ACM CCS ’24 Workshops, Salt Lake City, USA, Jul 2024"
+  url: "https://arxiv.org/pdf/2407.11259"
+  topics: [systems]
+
+- title: "DepsRAG: Towards Agentic Reasoning and Planning for Software Dependency Management"
+  authors: "Mohannad Alhanahnah and Yazan Boshmaf"
+  year: 2024
+  month: 12
+  kind: workshop
+  short: "OWA ’24"
+  venue: "The First Workshop on Open-World Agents"
+  ref: "OWA ’24, NeurIPS ’24 Workshops, Vancouver, Canada, Dec 2024"
+  url: "https://arxiv.org/pdf/2405.20455"
+  topics: [agents]
+
+- title: "Dizzy: Large-Scale Crawling and Analysis of Onion Services"
+  authors: "Yazan Boshmaf, Isuranga Perera, Udesh Kumarasinghe, Sajitha Liyanage, and Husam Al Jawaheri"
+  year: 2023
+  month: 8
+  kind: conference
+  short: "ARES ’23"
+  venue: "Proc. of the 18th ACM International Conference on Availability, Reliability and Security"
+  ref: "ARES ’23, Benevento, Italy, Aug 2023"
+  url: "https://arxiv.org/pdf/2209.07202.pdf"
+  topics: [chain]
+
+- title: "Content-Agnostic Detection of Phishing Domains using Certificate Transparency and Passive DNS"
+  authors: "Mashael Al Sabah, Mohamed Nabeel, Euijin Choo, and Yazan Boshmaf"
+  year: 2022
+  month: 10
+  kind: conference
+  short: "RAID ’22"
+  venue: "Proc. of 25th Symposium on Research in Attacks, Intrusions and Defenses"
+  ref: "RAID ’22, Limassol, Cyprus, Oct 2022"
+  url: "https://dl.acm.org/doi/10.1145/3545948.3545958"
+  topics: [web]
+  selected: true
+
+- title: "Deanonymizing Tor Hidden Service Users Through Bitcoin Transactions Analysis"
+  authors: "Husam Al Jawaheri, Mashael Al Sabah, Yazan Boshmaf, and Aiman Erbad"
+  year: 2020
+  month: 2
+  kind: journal
+  short: "COSE '20"
+  venue: "Elsevier Computers & Security"
+  ref: "Volume 89, Article 101684, Feb 2020"
+  url: "https://arxiv.org/pdf/1801.07501.pdf"
+  topics: [chain]
+
+- title: "Investigating MMM Ponzi Scheme on Bitcoin"
+  authors: "Yazan Boshmaf, Charitha Elvitigala, Husam Al Jawaheri, Primal Wijesekera, and Mashael Al Sabah"
+  year: 2020
+  month: 10
+  kind: conference
+  short: "AsiaCCS ’20"
+  venue: "Proc. of 15th ACM Asia Conference on Computer and Communications Security"
+  ref: "AsiaCCS ’20, Taipei, Taiwan, Oct 2020"
+  url: "https://arxiv.org/pdf/1910.12244"
+  topics: [chain]
+  selected: true
+
+- title: "Characterizing Bitcoin Donations to Open Source Software on GitHub"
+  authors: "Yury Zhauniarovich, Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah"
+  year: 2019
+  month: 7
+  kind: preprint
+  short: "arXiv"
+  venue: "arXiv preprint"
+  ref: "arXiv:1907.04002, Jul 2019"
+  url: "https://arxiv.org/pdf/1907.04002"
+  topics: [chain]
+
+- title: "BlockTag: Design and Applications of a Tagging System for Blockchain Analysis"
+  authors: "Yazan Boshmaf, Husam Al Jawaheri, and Mashael Al Sabah"
+  year: 2019
+  month: 6
+  kind: conference
+  short: "IFIP SEC ’19"
+  venue: "Proc. of 34th International Conference on ICT Systems Security and Privacy Protection"
+  ref: "IFIP SEC ’19, Lisbon, Portugal, Jun 2019"
+  url: "https://arxiv.org/pdf/1809.06044"
+  topics: [chain]
+
+- title: "Source Attribution of Cryptographic API Misuse in Android Applications"
+  authors: "Ildar Muslukhov, Yazan Boshmaf, and Konstantin Beznosov"
+  year: 2018
+  month: 6
+  kind: conference
+  short: "AsiaCCS ’18"
+  venue: "Proc. of 13th ACM Asia Conference on Computer and Communications Security"
+  ref: "AsiaCCS ’18, Songdo, Incheon, Korea, Jun 2018"
+  url: "https://doi.org/10.1145/3196494.3196538"
+  topics: [mobile]
+
+- title: "Visualization of Actionable Knowledge to Mitigate DRDoS Attacks"
+  authors: "Michael Aupetit, Yury Zhauniarovich, Giorgos Vasiliadis, Marc Dacier, and Yazan Boshmaf"
+  year: 2016
+  month: 10
+  kind: conference
+  short: "VizSec ’16"
+  venue: "Proc. of 2016 IEEE Symposium on Visualization for Cyber Security"
+  ref: "VizSec ’16, Baltimore, MD, Oct 2016"
+  url: "https://doi.org/10.1109/VIZSEC.2016.7739577"
+  topics: [systems]
+
+- title: "Decoupling Data-at-Rest Encryption and Smartphone Locking with Wearable Devices"
+  authors: "Ildar Muslukhov, San-Tsai Sun, Primal Wijesekera, Yazan Boshmaf, and Konstantin Beznosov"
+  year: 2016
+  month: 10
+  kind: journal
+  short: "PMC '16"
+  venue: "Elsevier Pervasive and Mobile Computing"
+  ref: "Volume 32, Pages 26–34, Oct 2016"
+  url: "https://doi.org/10.1016/j.pmcj.2016.06.016"
+  topics: [mobile]
+
+- title: "Íntegro: Leveraging Victim Prediction for Robust Fake Account Detection in Large Scale OSNs"
+  authors: "Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, Konstantin Beznosov, and Hassan Halawa"
+  year: 2016
+  month: 8
+  kind: journal
+  short: "COSE '16"
+  venue: "Elsevier Computers and Security"
+  ref: "Volume 61, Pages 142–168, Aug 2016"
+  url: "http://www.ece.ubc.ca/~matei/papers/integro16.pdf"
+  topics: [web]
+
+- title: "Interacting with Large Distributed Datasets using Sketch"
+  authors: "Mihai Budiu, Rebecca Isaacs, Derek Murray, Gordon Plotkin, Paul Barham, Samer Al-Kiswany, Yazan Boshmaf, Qingzhou Luo, and Alexandr Andoni"
+  year: 2016
+  month: 6
+  kind: conference
+  short: "EGPGV ’16"
+  venue: "Proc. of 2016 Eurographics Symposium on Parallel Graphics and Visualization"
+  ref: "EGPGV ’16, Groningen, the Netherlands, Jun 2016"
+  url: "http://homepages.inf.ed.ac.uk/gdp/publications/sketch.pdf"
+  topics: [systems]
+
+- title: "Harvesting the Low-Hanging Fruits: Defending Against Automated Large-Scale Cyber-Intrusions by Focusing on the Vulnerable Population"
+  authors: "Hassan Halawa, Konstantin Beznosov, Yazan Boshmaf, Baris Coskun, Elizeu Santos-Neto, and Matei Ripeanu"
+  year: 2016
+  month: 9
+  kind: workshop
+  short: "NSPW ’16"
+  venue: "Proc. of 2016 New Security Paradigms Workshop"
+  ref: "NSPW ’16, C Lazy U Ranc, CO, Sep 2016"
+  url: "http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45557.pdf"
+  topics: [web]
+
+- title: "Thwarting Fake OSN Accounts by Predicting their Victims"
+  authors: "Yazan Boshmaf, Matei Ripeanu, Konstantin Beznosov, and Elizeu Santos-Neto"
+  year: 2015
+  month: 10
+  kind: workshop
+  short: "AI-Sec ’15"
+  venue: "Proc. 8th ACM Workshop on Artificial Intelligence and Security"
+  ref: "AI-Sec ’15, Denver, CO, Oct 2015"
+  url: "https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43862.pdf"
+  topics: [web]
+
+- title: "Leveraging Victim Prediction for Robust Fake Account Detection in OSNs"
+  authors: "Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, and Konstantin Beznosov"
+  year: 2015
+  month: 2
+  kind: conference
+  short: "NDSS ’15"
+  venue: "Proc. of 2015 Network and Distributed System Security Symposium"
+  ref: "NDSS ’15, San Diego, CA, Feb 2015"
+  url: "https://www.ndss-symposium.org/ndss2015/ndss-2015-programme/integro-leveraging-victim-prediction-robust-fake-account-detection-osns/"
+  topics: [web]
+  selected: true
+
+- title: "To Befriend or Not? A Model of Friend Request Acceptance on Facebook"
+  authors: "Hootan Rashtian, Yazan Boshmaf, Pooya Jaferian, and Konstantin Beznosov"
+  year: 2014
+  month: 7
+  kind: conference
+  short: "SOUPS ’14"
+  venue: "Proc. of 2014 Symposium on Usable Privacy and Security"
+  ref: "SOUPS ’14, Menlo Park, CA, July 2014"
+  url: "https://www.usenix.org/system/files/conference/soups2014/soups14-paper-rashtian.pdf"
+  topics: [web]
+
+- title: "Know Your Enemy: The Risk of Unauthorized Access in Smartphones by Insiders"
+  authors: "Ildar Muslukhov, Yazan Boshmaf, Cynthia Kuo, Jonathan Lester, and Konstantin Beznosov"
+  year: 2013
+  month: 8
+  kind: conference
+  short: "Mobile-CHI ’13"
+  venue: "Proc. of 15th International Conference on Human-Computer Interaction with Mobile Devices and Services"
+  ref: "Mobile-CHI ’13, Munich, Germany, Aug 2013"
+  url: "https://doi.org/10.1145/2493190.2493223"
+  topics: [mobile]
+
+- title: "Graph-based Sybil Detection in Social and Information Systems"
+  authors: "Yazan Boshmaf, Konstantin Beznosov, and Matei Ripeanu"
+  year: 2013
+  month: 8
+  kind: conference
+  short: "ASONAM ’13"
+  venue: "Proc. of 2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining"
+  ref: "ASONAM ’13, Niagara Falls, Canada, August 2013"
+  url: "https://doi.org/10.1145/2492517.2492568"
+  award: "Best paper award"
+  topics: [web]
+
+- title: "Adaptive Composition of Distributed Pervasive Applications in Heterogeneous Environments"
+  authors: "Stephan Schuhmann, Klaus Herrmann, Kurt Rothermel, and Yazan Boshmaf"
+  year: 2013
+  month: 7
+  kind: journal
+  short: "TAAS '13"
+  venue: "ACM Transactions on Autonomous and Adaptive Systems"
+  ref: "Volume 8, Issue 2, Article No. 10, Jul 2013"
+  url: "https://doi.org/10.1145/2491465.2491469"
+  topics: [systems]
+
+- title: "Key Challenges in Defending against Malicious Socialbots"
+  authors: "Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, Matei Ripeanu"
+  year: 2012
+  month: 4
+  kind: workshop
+  short: "LEET ’12"
+  venue: "Proc. of 5th USENIX Workshop on Large-Scale Exploits and Emergent Threats"
+  ref: "LEET ’12, San Jose, CA, April 2012"
+  url: "https://www.usenix.org/conference/leet12/workshop-program/presentation/boshmaf"
+  topics: [web]
+
+- title: "Understanding Users' Requirements for Data Protection in Smartphones"
+  authors: "Ildar Muslukhov, Yazan Boshmaf, Cynthia Kuo, Jonathan Lester, and Konstantin Beznosov"
+  year: 2012
+  month: 4
+  kind: workshop
+  short: "ICDEW ’12"
+  venue: "Proc. of 28th International Conference on Data Engineering Workshops"
+  ref: "ICDEW ’12, Arlington, VA, April 2012"
+  url: "https://doi.org/10.1109/ICDEW.2012.83"
+  topics: [mobile]
+
+- title: "Design and Analysis of a Social Botnet"
+  authors: "Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu"
+  year: 2012
+  month: 2
+  kind: journal
+  short: "COMNET '12"
+  venue: "Elsevier Computer Networks"
+  ref: "Volume 57 Issue 2, Pages 556-578, Feb 2013"
+  url: "https://doi.org/10.1016/j.comnet.2012.06.006"
+  topics: [web]
+
+- title: "The Socialbot Network: When Bots Socialize for Fame and Money"
+  authors: "Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu"
+  year: 2011
+  month: 12
+  kind: conference
+  short: "ACSAC ’11"
+  venue: "Proc. of 27th Annual Computer Security Applications Conference"
+  ref: "ACSAC ’11, Orlando, FL, Dec 2011"
+  url: "https://doi.org/10.1145/2076732.2076746"
+  award: "Outstanding paper award"
+  topics: [web]
+  selected: true
+
+- title: "A Billion Keys, but Few Locks: The Crisis of Web Single Sign-on"
+  authors: "San-Tsai Sun, Yazan Boshmaf, Kirstie Hawkey, and Konstantin Beznosov"
+  year: 2010
+  month: 12
+  kind: workshop
+  short: "NSPW ’10"
+  venue: "Proc. of 2010 New Security Paradigms Workshop"
+  ref: "NSPW ’10, Colonial Inn, Concord, MA, Dec 2010"
+  url: "http://www.nspw.org/2009/proceedings/2010/nspw2010-sun.pdf"
+  topics: [web]
+
+- title: "SIMD-Scan: Ultra Fast in-Memory Table Scan Using on-Chip Vector Processing Units"
+  authors: "Thomas Willhalm, Nicolae Popovici, Yazan Boshmaf, Hasso Plattner, Alexander Zeier, and Jan Schaffner"
+  year: 2009
+  month: 8
+  kind: journal
+  short: "PVLDB '09"
+  venue: "Proc. of the VLDB Endowment"
+  ref: "Volume 2, Issue 1, Pages 385-394, Aug 2009"
+  url: "http://www.vldb.org/pvldb/2/vldb09-327.pdf"
+  topics: [systems]

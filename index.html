@@ -1,290 +1,166 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="description" content="Yazan Boshmaf, Research Scientist in Cyber Security at Qatar Computing Research Institute, HBKU">
-  <meta name="keywords" content="Yazan Boshmaf, Boshmaf, Security, Privacy, Research, QCRI, HBKU">
-
-  <link rel="icon" href="img/favicon.png">
-
-  <title>Home - Yazan Boshmaf</title>
-
-  <link rel="stylesheet" href="css/common.css" type="text/css">
-  <style type="text/css">
-    table { border: 0; margin: 0; }
-    #border { width:985px; border: 1px solid #aaa; background-color: #f8f8f8; padding: 24px 0; }
-    .column { position: relative; padding: 0 24px; text-align: left; vertical-align: top; }
-    .column#left { width: 336px; border-right: 1px solid #ccc; }
-    .underlined { margin: 0 0 5px 0; text-decoration: underline; }
-    p { margin: 14px 0 0 0; padding: 0; }
-    img { border: 0; }
-    h1 { font-size: 24px; margin: 9px 0 6px 0; padding: 0; }
-    h2 { font-size: 22px; margin: 20px 0 -2px 0; padding: 14px 0 0 0; border-top: 1px solid #bbb; line-height: 24px; }
-    h2 span { padding-top: 2px; }
-    h2.top { margin: 0; padding: 0; border: 0; }
-    #title { padding: 0 0 18px 0; margin: 0 0 15px 0; border-bottom: 1px solid #bbb; }
-    #contact { margin-left: 13px; }
-    #contact td { text-align: left; vertical-align: top; margin: 0; padding-bottom: 9px; }
-    #contact td.l { text-align: right; font-style: italic; padding-right: 12px; }
-    .title { margin: 0 0 3px 0; }
-    .students { margin-top: 9px; padding: 18px 0 0 0; border-top: 1px solid #bbb; }
-    .plugins { margin-top: 18px; padding: 18px 0 18px 0; border-top: 1px solid #bbb; }
-    .altlink { margin-left: 6px; font-size: 90%; }
-    .rule { margin-top: 20px; padding-top: 14px; border-top: 1px solid #bbb; }
-    .footer{ margin: 15px 0 0 0; display: table; text-align: center; margin-left: auto; margin-right: auto; }
-  </style>
-
-
-<body>
-
-  <table cellpadding="0" cellspacing="0" width="100%"><tr><td align="center">
-  <table cellpadding="0" cellspacing="0"><tr><td id="border">
-  <table cellpadding="0" cellspacing="0"><tr><td class="column" id="left">
-
-  <img width="336" src="img/boshmaf-01.jpg" alt="Yazan Boshmaf">
-  <h1><a href="https://boshmaf.github.io">Yazan Boshmaf</a></h1>
-  <div id="title">
-    <div>Researcher, writer, developer, and hacker.</div>
+---
+layout: default
+graph: true
+description: Yazan Boshmaf is a Senior Research Scientist at QCRI, HBKU, working on AI safety, security, privacy and governance for AI systems that act in the world.
+---
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">AI safety · security · privacy · governance</p>
+      <h1>AI that acts in the world should be <em>verifiable and accountable</em>.</h1>
+      <p class="lede">I'm a senior research scientist at QCRI, HBKU. I build the evaluations, provenance and runtime checks that let people trust, constrain and correct AI agents.</p>
+      <ul class="roles">
+        <li>Senior Research Scientist, <a href="https://www.hbku.edu.qa/en/qcri">QCRI</a></li>
+        <li>Co-Founder &amp; Director, <a href="https://www.mena.ml">MenaML</a></li>
+      </ul>
+      <div class="cta">
+        <a class="btn primary" href="{{ site.author.cv | relative_url }}">Download CV</a>
+        <a class="btn" href="{{ '/pubs.html' | relative_url }}">Publications</a>
+        <a class="btn" href="{{ site.author.scholar }}">Google Scholar ↗</a>
+      </div>
+    </div>
+    <figure class="graph-card">
+      <canvas id="graph" role="img" aria-label="Animated agent interaction graph. The agent queries a search tool, whose result from the untrusted web comes back tainted and taints the agent's context. When the agent then calls a privileged shell tool with that data, a policy check outside the agent denies the call: untrusted to privileged. Trusted calls to the shell tool pass the same check."></canvas>
+      <figcaption class="mono">
+        <span>Agent interaction graph</span>
+        <span class="legend"><span><i></i>trusted data</span><span><i class="b"></i>tainted by untrusted input</span></span>
+      </figcaption>
+    </figure>
   </div>
+</section>
 
-  <table id="contact" cellpadding="0" cellspacing="0">
-    <tr>
-      <td class="l">now:</td>
-      <td>
-        <div>Senior Research Scientist, <a href="https://www.hbku.edu.qa/en/qcri">QCRI</a></div>
-        <div>Co-Founder and Director, <a href="https://www.mena.ml">MenaML</a></div>
-      </td>
-    </tr>
-    <tr>
-      <td class="l">before:</td>
-      <td>
-        <div>Founder, <a href="https://www.linkedin.com/company/quickbyte-io">QuickByte</a></div>
-        <div>Software Engineer, <a href="https://hoostsuite.com">Hootsuite</a></div>
-        <div>Research Assistant, <a href="https://ece.ubc.ca">UBC</a></div>
-        <div>Research Intern, <a href="https://research.microsoft.com">Microsoft</a></div>
-        <div>Research Intern, <a href="http://www.tid.es">Telefonica</a></div>
-        <div>Research Intern, <a href="https://research.fb.com">Facebook</a></div>
-        <div>Research Intern, <a href="https://www.sophos.com">Sophos</a></div>
-        <div>Research Engineer, <a href="https://www.hlrs.de/home">HLRS</a></div>
-        <div>Research Engineer, <a href="https://www.sap.com">SAP</a></div>
-        <div>Software Engineer, <a href="https://www.intel.com">Intel</a></div>
-        <div>Research Assistant, <a href="https://www.ipvs.uni-stuttgart.de/index1.html?__locale=en">Uni Stuttgart</a></div>
-        <div>Infrastructure Consultant, <a href="https://enterprise.microsoft.com/en-us/services/">Microsoft</a></div>
-        <div>Network Engineer, <a href="http://www.estartasolutions.com">Estarta</a></div>
-      </td>
-    </tr>
-    <tr>
-      <td class="l">email:</td>
-      <td><a id="email">yboshmaf at hbku edu qa</a> &nbsp;</td>
-    </tr>
-    <tr>
-      <td class="l">social:</td>
-      <td><a href="https://twitter.com/boshmaf" target="_blank">Twitter</a>, <a href="https://linkedin.com/in/boshmaf" target="_blank">LinkedIn</a></td>
-    </tr>
-    <tr>
-      <td class="l">office:</td>
-      <td><span id="phone">+974-445-[four one five five two]</span></td>
-    </tr>
-    <tr>
-      <td class="l"></td>
-       <td>
-        HBKU Research Complex<br>
-        RC-B1-1190, Room A146<br>
-        Education City<br>
-        Doha, Qatar
-      </td>
-    </tr>
-  </table>
-
-  <div class="students">
-    <span class="announcement info">If you are a <b>student</b> and interested in working with me, please click <a href="students.html">here!</a></span>
+<section class="block" id="about">
+  <div class="wrap now">
+    <div class="about">
+      <div class="portrait">
+        <img src="{{ site.author.photo | relative_url }}" alt="Portrait of Yazan Boshmaf" width="76" height="76">
+        <div>{{ site.author.tagline }}<small>PhD, ECE · University of British Columbia</small></div>
+      </div>
+      <p>I build things. I like to be challenged. I go after hard software systems problems, find peace in academic writing, and strive to be a successful entrepreneur. Ask me about my side projects and hacks.</p>
+      <p>I received my PhD in <a href="https://www.ece.ubc.ca/">Electrical and Computer Engineering</a> from UBC under the mentorship of <a href="https://www.ece.ubc.ca/~beznosov/">Konstantin Beznosov</a> and <a href="https://www.ece.ubc.ca/~matei/">Matei Ripeanu</a>. My <a href="https://dx.doi.org/10.14288/1.0167277">thesis</a> presented one of the first security analyses of malicious socialbots on the web.</p>
+      <details class="history">
+        <summary>Previously</summary>
+        <ul>
+          <li>Founder, <a href="https://www.linkedin.com/company/quickbyte-io">QuickByte</a></li>
+          <li>Software Engineer, <a href="https://www.hootsuite.com">Hootsuite</a></li>
+          <li>Research Assistant, <a href="https://www.ece.ubc.ca">UBC</a></li>
+          <li>Research Intern, <a href="https://www.microsoft.com/en-us/research/">Microsoft</a>, <a href="https://www.telefonica.com">Telefónica</a>, <a href="https://research.facebook.com">Facebook</a>, <a href="https://www.sophos.com">Sophos</a></li>
+          <li>Research Engineer, <a href="https://www.hlrs.de">HLRS</a>, <a href="https://www.sap.com">SAP</a></li>
+          <li>Software Engineer, <a href="https://www.intel.com">Intel</a></li>
+          <li>Research Assistant, <a href="https://www.ipvs.uni-stuttgart.de">Uni Stuttgart</a></li>
+          <li>Infrastructure Consultant, <a href="https://www.microsoft.com/en-us/professionalservices/overview">Microsoft</a></li>
+          <li>Network Engineer, <a href="https://www.estarta.com/">Estarta</a></li>
+        </ul>
+      </details>
+    </div>
+    <div id="news">
+      <div class="head"><h2>Now</h2><a class="more" href="{{ '/news.html' | relative_url }}">All news</a></div>
+      <ol class="timeline">
+        {%- for n in site.data.news limit: site.home_news %}
+        {% include news-item.html entry=n %}
+        {%- endfor %}
+      </ol>
+    </div>
   </div>
+</section>
 
-  <div class="plugins">
-    If you have time, check out the following public <b>systems</b> that I contributed to:
-    <p>
-      <div class="title"><a class=title href="https://aixamine.qcri.org">aiXamine</a></div>
-      <small>
-        Security benchmarking for text LLMs
-        <div class=ref><i>Over 45 tests across 9 evaluation areas</i><br>
-      </small>
-    </p>
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="head"><h2>Research</h2><a class="more" href="{{ '/research.html' | relative_url }}">Read the research statement</a></div>
+    <p class="lede section-lede">I study how to make AI systems that act in the world safe, secure, privacy-preserving, and accountable, treating AI assurance as a systems problem across the whole AI lifecycle.</p>
+    <div class="bento">
+      <article class="tile wide">
+        <p class="eyebrow">Thrust 1</p>
+        <h3>AI safety, security &amp; privacy</h3>
+        <p>LLM and agent evaluation, poisoning and supply-chain attacks, attribution, privacy, and trustworthy evidence.</p>
+        <div class="tags"><span>poisoning</span><span>AI BOMs</span><span>attribution</span></div>
+      </article>
+      <article class="tile wide">
+        <p class="eyebrow">Thrust 2</p>
+        <h3>Trustworthy AI evaluation</h3>
+        <p>Black-box and dynamic benchmarks, benchmark reliability, policy-to-benchmark compilation, and measurement validity.</p>
+        <div class="tags"><span>aiXamine</span><span>SSP-Bench</span><span>Policy2Bench</span></div>
+      </article>
+      <article class="tile">
+        <p class="eyebrow">Thrust 3</p>
+        <h3>Secure agentic systems</h3>
+        <p>Agent interaction graphs, least-privilege authorization, tool security, provenance, runtime enforcement, and compositional attacks.</p>
+        <div class="tags"><span>MCP</span><span>A2A</span><span>GraphGuard</span></div>
+      </article>
+      <article class="tile">
+        <p class="eyebrow">Thrust 4</p>
+        <h3>AI governance &amp; assurance</h3>
+        <p>Pre-deployment certification, policy as code, monitoring, incident response, recertification, and human accountability.</p>
+        <div class="tags"><span>policy as code</span><span>recertification</span></div>
+      </article>
+      <article class="tile past">
+        <p class="eyebrow">Earlier &amp; continuing</p>
+        <h3>Networks, blockchains &amp; online abuse</h3>
+        <p>Socialbots, cryptocurrencies, blockchain analytics, dark web measurement, applied cryptography, and privacy.</p>
+        <div class="tags"><span>Íntegro</span><span>CIBR</span><span>Dizzy</span></div>
+      </article>
+    </div>
 
-    <p>
-      <div class="title"><a class=title href="https://fanar.qa/en">Fanar</a></div>
-      <small>
-        Arabic-centric multimodal GenAI platform
-        <div class=ref><i>Arabic LLM with fact checking and attribution</i><br>
-      </small>
-    </p>
-  </span>
+    <div class="arc" role="region" aria-label="Research timeline" tabindex="0">
+      <ol>
+        <li><span class="mono">2011</span><b>Socialbot Network</b><span>100 bots, up to 80% infiltration. ACSAC outstanding paper.</span></li>
+        <li><span class="mono">2015</span><b>Íntegro</b><span>Victim prediction on a 160M-node graph at Tuenti. NDSS.</span></li>
+        <li><span class="mono">2016</span><b>CIBR at QCRI</b><span>Blockchain research initiative; tools used to investigate crypto fraud.</span></li>
+        <li><span class="mono">2024</span><b>Fanar attribution</b><span>Claim-level source attribution for an Arabic-centric LLM.</span></li>
+        <li><span class="mono">2025 →</span><b>AI Assurance Programme</b><span>Measurement, runtime security and lifecycle governance.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
-  <p>
-      <div class="title"><a class=title href="https://cyberxpert.qcri.org">CyberXpert</a></div>
-      <small>
-        Agentic cybersecurity AI for analysts
-        <div class=ref><i>One workspace for AI, agents, and tools</i><br>
-      </small>
-    </p>
-  </span>
+<section class="block" id="systems">
+  <div class="wrap">
+    <div class="head"><h2>Systems you can use</h2></div>
+    <div class="systems">
+      <a class="sys" href="https://aixamine.qcri.org">
+        <h3>aiXamine</h3>
+        <p>Security benchmarking for text LLMs, with cross-dimensional trade-offs left visible.</p>
+        <span class="stat">45+ tests · 9 evaluation areas</span>
+      </a>
+      <a class="sys" href="https://fanar.qa/en">
+        <h3>Fanar</h3>
+        <p>Arabic-centric multimodal GenAI platform with fact checking and attribution.</p>
+        <span class="stat">I led the attribution subproject</span>
+      </a>
+      <a class="sys" href="https://cyberxpert.qcri.org">
+        <h3>CyberXpert</h3>
+        <p>Agentic cybersecurity AI for analysts: one workspace for AI, agents and tools.</p>
+        <span class="stat">Agents · tools · analyst workflows</span>
+      </a>
+    </div>
+  </div>
+</section>
 
-  </td><td class="column" id="right">
+<section class="block" id="publications">
+  <div class="wrap">
+    <div class="head"><h2>Selected publications</h2><a class="more" href="{{ '/pubs.html' | relative_url }}">All publications</a></div>
+    <ul class="pubs pubs-compact">
+      {%- assign selected = site.data.pubs | where: "selected", true %}
+      {%- for p in selected %}
+      {% include pub.html pub=p %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
 
-  <h2 class="top">
-    <span class="morelinks pdf"><a href="docs/boshmaf_cv.pdf">&raquo;&nbsp;cv</a></span>
-    About me
-  </h2>
-
-  <p>I build things. I like to be challenged. I go after hard software systems problems. I find peace in academic writing. I strive to be a successful entrepreneur. Ask me about my side projects and hacks.</p>
-  <p>I received my PhD in <a href="http://www.ece.ubc.ca/">Electrical and Computer Engineering</a> from the University of British Columbia (UBC) under the mentorship of <a href="http://www.ece.ubc.ca/~beznosov/">Konstantin Beznosov</a> and <a href="http://www.ece.ubc.ca/~matei/">Matei Ripeanu</a>. My <a href="https://dx.doi.org/10.14288/1.0167277">thesis</a> presented one of the first security analyses of malicious socialbots on the web.</p>
-  <h2>
-    <span class="morelinks"><a href="research.html">&raquo;&nbsp;statement</a></span>
-    Research
-  </h2>
-
-  <p>I study how to make AI systems that act in the world safe, secure, privacy-preserving, and accountable. My research treats AI assurance as a systems problem spanning evaluation, provenance, runtime enforcement, observability, incident response, and governance across the AI lifecycle.</p>
-
-  <p>
-    <div class="underlined">AI Safety, Security, and Privacy</div>
-    LLM and agent evaluation, poisoning and supply-chain attacks, attribution, privacy, and trustworthy evidence.
-  </p>
-
-  <p>
-    <div class="underlined">Trustworthy AI Evaluation</div>
-    Black-box and dynamic benchmarks, benchmark reliability, policy-to-benchmark compilation, and measurement validity.
-  </p>
-
-  <p>
-    <div class="underlined">Secure Agentic Systems</div>
-    Agent interaction graphs, least-privilege authorization, tool security, provenance, runtime enforcement, and compositional attacks.
-  </p>
-
-  <p>
-    <div class="underlined">AI Governance and Assurance</div>
-    Pre-deployment certification, policy as code, monitoring, incident response, recertification, and human accountability.
-  </p>
-
-  <p>
-    <div class="underlined">Networks, Blockchains, and Online Abuse</div>
-    Earlier and continuing work on socialbots, cryptocurrencies, blockchain analytics, dark web measurement, applied cryptography, and privacy.
-  </p>
-
-  <h2>
-    <span class="morelinks"><a href="news.html">&raquo;&nbsp;older</a></span>
-    Latest news
-  </h2>
-
-  <p class="indent">
-    <div class="underlined">Oct, 2026</div>
-    I'm speaking as a panelist at <a href="https://www.qatar.georgetown.edu/">GT-Q</a> on Technology, Trust, and Policy.</br>
-    I'm attending <a href="https://raid2026.org/">RAID 2026</a>. See you in Lancaster!</br>
-  </p>
-
-  <p class="indent">
-    <div class="underlined">Apr, 2026</div>
-    Our research on combating financial crime was awarded the <a href="http://www.princenaifprize.com/">Prince Naif Prize</a>.</br>
-  </p>
-
-  <p class="indent">
-    <div class="underlined">Jan, 2026</div>
-    I'm attending <a href="https://mena.ml/">MenaML Winter School 2026</a>. See you in Jaddah!</br>
-  </p>
-
-  <h2>
-    <span class="morelinks">
-      <a href="pubs.html">&raquo;&nbsp;all</a>
-    </span>
-    Selected publications
-  </h2>
-
- <p>
-    <div class="title"><span class="pdf"><a class=title href="https://arxiv.org/pdf/2605.27631">Poison with Style: A Practical Poisoning Attack on Code Large Language Models</a></span></div>
-    <small>
-      Khang Tran, Yazan Boshmaf, Issa Khalil, NhatHai Phan, Ting Yu, and Md Rizwan Parvez 
-      <div class=ref><i>Proc. of 43rd International Conference on Machine Learning</i><br>
-      ICML &rsquo;26, Seoul, South Korea, Jul 2026</div>
-    </small>
-  </p> 
-
-  <p>
-    <div class="title"><span class="pdf"><a class=title href="https://dl.acm.org/doi/10.1145/3545948.3545958">Content-Agnostic Detection of Phishing Domains using Certificate Transparency and Passive DNS</a></span></div>
-    <small>
-      Mashael Al Sabah, Mohamed Nabeel, Euijin Choo, and Yazan Boshmaf 
-      <div class=ref><i>Proc. of 25th Symposium on Research in Attacks, Intrusions and Defenses</i><br>
-      RAID &rsquo;22, Limassol, Cyprus, Oct 2022</div>
-    </small>
-  </p>
-
-  <p>
-    <div class="title"><span class="pdf"><a class=title href="https://arxiv.org/pdf/1910.12244">Investigating MMM Ponzi Scheme on Bitcoin</a></span></div>
-    <small>
-      Yazan Boshmaf, Charitha Elvitigala, Husam Al Jawaheri, Primal Wijesekera, and Mashael Al Sabah
-      <div class=ref><i>Proc. of 15th ACM Asia Conference on Computer and Communications Security</i><br>
-      AsiaCCS &rsquo;20, Taipei, Taiwan, Oct 2020</div>
-    </small>
-  </p>
-
-  <p>
-    <div class="title"><span class="pdf"><a class=title href="http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf">Leveraging Victim Prediction for Robust Fake Account Detection in OSNs</a></span></div>
-    <small>
-    Yazan Boshmaf, Dionysios Logothetis, Georgos Siganos, Jorge Lería, Jose Lorenzo, Matei Ripeanu, and Konstantin Beznosov
-  <div class=ref><i>Proc. of 2015 Network and Distributed System Security Symposium</i><br>
-    NDSS &rsquo;15, San Diego, CA, Feb 2015</div>
-  </small>
-  </p>
-
-  <p>
-    <div class="title"><span class="pdf"><a class=title href="http://lersse-dl.ece.ubc.ca/record/264/files/264.pdf">The Socialbot Network: When Bots Socialize for Fame and Money</a></span></div>
-    <small>
-    Yazan Boshmaf, Ildar Muslukhov, Konstantin Beznosov, and Matei Ripeanu
-  <div class=ref><i>Proc. of 27th Annual Computer Security Applications Conference</i><br>
-    ACSAC &rsquo;11, Orlando, FL, Dec 2011 &mdash; <b>outstanding paper award</b></div>
-  </small>
-  </p>
-
-  </td></tr></table>
-  </td></tr></table>
-  </td></tr></table>
-
-  <div class="footer">Modified HTML/CSS/JS used from <a href="https://jhalderm.com/">J. Alex Halderman</a>.</div>
-
-  <script type="text/javascript">
-      function setText(id, t) {
-        var el = document.getElementById(id);
-        if (document.all) {
-          el.innerText = t;
-        } else {
-          el.textContent = t;
-        }
-        return el;
-      }
-
-      function showemail(d,u) {
-        var email = u + "@" + d;
-        var el = setText('email', email);
-        el.setAttribute('href', 'mailto:'+email);
-      }
-
-      function showphone(node, a,b) {
-        setText(node, '+974 '+a+'-'+b);
-      }
-
-      showemail('hbku.edu.qa','yboshmaf');
-      showphone('phone','445','41552');
-
-  </script>
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-93027554-1', 'auto');
-  ga('send', 'pageview');
-  </script>
-
-</body>
-</html>
+<section class="block" id="students">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <p class="eyebrow">Research is fun</p>
+        <h2>Students and interns: let's work together.</h2>
+        <p>I mentor students on AI security, evaluation and agentic systems. Start with the reading list, then email me with a paper of mine you'd like to extend.</p>
+      </div>
+      <ul>
+        <li><a href="{{ '/students.html' | relative_url }}">Reading list for new researchers <span aria-hidden="true">→</span></a></li>
+        <li><a href="https://www.hbku.edu.qa/en/qcri/contact">QCRI research internships <span aria-hidden="true">↗</span></a></li>
+        <li><a href="#contact">Ask about mentorship <span aria-hidden="true">→</span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+{%- assign p = include.pub -%}
+<li class="pub" data-topics="{{ p.topics | join: ' ' }}" data-kind="{{ p.kind }}">
+  <span class="venue{% if p.kind == 'preprint' %} pre{% endif %}">{{ p.short }}</span>
+  <div>
+    <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
+    <p class="authors">{{ p.authors | replace: site.author.name, '<b>Yazan Boshmaf</b>' }}</p>
+    <div class="meta">
+      <span>{{ p.venue }}</span>
+      <span>{{ p.ref }}</span>
+      {%- if p.award %}<span class="badge">★ {{ p.award }}</span>{% endif %}
+    </div>
+    <div class="actions">
+      <a href="{{ p.url }}">PDF</a>
+      <button type="button" class="bib" hidden data-type="{% if p.kind == 'journal' or p.kind == 'preprint' %}article{% else %}inproceedings{% endif %}" data-title="{{ p.title | escape }}" data-authors="{{ p.authors | escape }}" data-venue="{{ p.venue | escape }}" data-year="{{ p.year }}" data-url="{{ p.url }}">BibTeX</button>
+    </div>
+  </div>
+</li>

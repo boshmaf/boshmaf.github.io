@@ -1,0 +1,22 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }} · News</title>
+  <link href="{{ '/feed.xml' | absolute_url }}" rel="self"/>
+  <link href="{{ '/news.html' | absolute_url }}"/>
+  <id>{{ '/news.html' | absolute_url }}</id>
+  <updated>{{ site.data.news.first.date | append: "-01" | date: "%Y-%m-%dT00:00:00+03:00" }}</updated>
+  <author><name>{{ site.author.name | xml_escape }}</name></author>
+  {%- for n in site.data.news limit: 20 %}
+  {%- assign d = n.date | append: "-01" %}
+  <entry>
+    <title>{{ d | date: "%B %Y" }}: {{ n.items.first | markdownify | strip_html | strip | truncate: 90 | xml_escape }}</title>
+    <link href="{{ '/news.html' | absolute_url }}#y{{ n.date | slice: 0, 4 }}"/>
+    <id>{{ '/news.html' | absolute_url }}#{{ n.date }}</id>
+    <updated>{{ d | date: "%Y-%m-%dT00:00:00+03:00" }}</updated>
+    <content type="html">{% for item in n.items %}{{ item | markdownify | xml_escape }}{% endfor %}</content>
+  </entry>
+  {%- endfor %}
+</feed>
