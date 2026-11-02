@@ -41,6 +41,8 @@ plugins:
 
 exclude:
   - README.md
+  - AGENTS.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - vendor
