@@ -19,7 +19,7 @@ generated from the same data on every build.
 
 ## Run locally
 
-Optional: pushing to `master` builds and deploys the site without any local
+Optional: pushing to `main` builds and deploys the site without any local
 setup. To preview changes first, you need Ruby 3.3 or newer.
 
 **Install Ruby**
