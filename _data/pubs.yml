@@ -178,7 +178,7 @@
   short: "AsiaCCS ’18"
   venue: "Proc. of 13th ACM Asia Conference on Computer and Communications Security"
   ref: "AsiaCCS ’18, Songdo, Incheon, Korea, Jun 2018"
-  url: "http://lersse-dl.ece.ubc.ca/record/324/files/binsight-asiaccs-2018.pdf"
+  url: "https://doi.org/10.1145/3196494.3196538"
   topics: [mobile]
 
 - title: "Visualization of Actionable Knowledge to Mitigate DRDoS Attacks"
@@ -189,7 +189,7 @@
   short: "VizSec ’16"
   venue: "Proc. of 2016 IEEE Symposium on Visualization for Cyber Security"
   ref: "VizSec ’16, Baltimore, MD, Oct 2016"
-  url: "http://www.zhauniarovich.com/files/pubs/VizFilt_Aupetit2016.pdf"
+  url: "https://doi.org/10.1109/VIZSEC.2016.7739577"
   topics: [systems]
 
 - title: "Decoupling Data-at-Rest Encryption and Smartphone Locking with Wearable Devices"
@@ -200,7 +200,7 @@
   short: "PMC '16"
   venue: "Elsevier Pervasive and Mobile Computing"
   ref: "Volume 32, Pages 26–34, Oct 2016"
-  url: "http://lersse-dl.ece.ubc.ca/record/319/files/muslukhov2016.pdf"
+  url: "https://doi.org/10.1016/j.pmcj.2016.06.016"
   topics: [mobile]
 
 - title: "Íntegro: Leveraging Victim Prediction for Robust Fake Account Detection in Large Scale OSNs"
@@ -255,7 +255,7 @@
   short: "NDSS ’15"
   venue: "Proc. of 2015 Network and Distributed System Security Symposium"
   ref: "NDSS ’15, San Diego, CA, Feb 2015"
-  url: "http://lersse-dl.ece.ubc.ca/record/296/files/NDSS_260_Final.pdf"
+  url: "https://www.ndss-symposium.org/ndss2015/ndss-2015-programme/integro-leveraging-victim-prediction-robust-fake-account-detection-osns/"
   topics: [web]
   selected: true
 
@@ -278,7 +278,7 @@
   short: "Mobile-CHI ’13"
   venue: "Proc. of 15th International Conference on Human-Computer Interaction with Mobile Devices and Services"
   ref: "Mobile-CHI ’13, Munich, Germany, Aug 2013"
-  url: "http://lersse-dl.ece.ubc.ca/record/286/files/paper.rev2.pdf"
+  url: "https://doi.org/10.1145/2493190.2493223"
   topics: [mobile]
 
 - title: "Graph-based Sybil Detection in Social and Information Systems"
@@ -289,7 +289,7 @@
   short: "ASONAM ’13"
   venue: "Proc. of 2013 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining"
   ref: "ASONAM ’13, Niagara Falls, Canada, August 2013"
-  url: "http://lersse-dl.ece.ubc.ca/record/286/files/ASONAM_2013.pdf"
+  url: "https://doi.org/10.1145/2492517.2492568"
   award: "Best paper award"
   topics: [web]
 
@@ -301,7 +301,7 @@
   short: "TAAS '13"
   venue: "ACM Transactions on Autonomous and Adaptive Systems"
   ref: "Volume 8, Issue 2, Article No. 10, Jul 2013"
-  url: "ftp://ftp.informatik.uni-stuttgart.de/pub/library/ncstrl.ustuttgart_fi/ART-2013-01/ART-2013-01.pdf"
+  url: "https://doi.org/10.1145/2491465.2491469"
   topics: [systems]
 
 - title: "Key Challenges in Defending against Malicious Socialbots"
@@ -312,7 +312,7 @@
   short: "LEET ’12"
   venue: "Proc. of 5th USENIX Workshop on Large-Scale Exploits and Emergent Threats"
   ref: "LEET ’12, San Jose, CA, April 2012"
-  url: "http://lersse-dl.ece.ubc.ca/record/275/files/275.pdf"
+  url: "https://www.usenix.org/conference/leet12/workshop-program/presentation/boshmaf"
   topics: [web]
 
 - title: "Understanding Users' Requirements for Data Protection in Smartphones"
@@ -323,7 +323,7 @@
   short: "ICDEW ’12"
   venue: "Proc. of 28th International Conference on Data Engineering Workshops"
   ref: "ICDEW ’12, Arlington, VA, April 2012"
-  url: "http://137.82.84.194/record/271/files/271.pdf"
+  url: "https://doi.org/10.1109/ICDEW.2012.83"
   topics: [mobile]
 
 - title: "Design and Analysis of a Social Botnet"
@@ -334,7 +334,7 @@
   short: "COMNET '12"
   venue: "Elsevier Computer Networks"
   ref: "Volume 57 Issue 2, Pages 556-578, Feb 2013"
-  url: "http://137.82.84.194/record/277/files/277.pdf"
+  url: "https://doi.org/10.1016/j.comnet.2012.06.006"
   topics: [web]
 
 - title: "The Socialbot Network: When Bots Socialize for Fame and Money"
@@ -345,7 +345,7 @@
   short: "ACSAC ’11"
   venue: "Proc. of 27th Annual Computer Security Applications Conference"
   ref: "ACSAC ’11, Orlando, FL, Dec 2011"
-  url: "http://lersse-dl.ece.ubc.ca/record/264/files/264.pdf"
+  url: "https://doi.org/10.1145/2076732.2076746"
   award: "Outstanding paper award"
   topics: [web]
   selected: true
