@@ -42,6 +42,8 @@ def tidy(soup, main, page_url):
         p.string = md_text
         return p
 
+    for kind in main.select(".email-kind"):
+        kind.append(":")
     for small in main.select("small"):
         small.insert_before(" · ")
     for tags in main.select(".tags"):
@@ -96,8 +98,7 @@ def convert(site, name, base):
     opts = dict(heading_style="ATX", bullets="-", newline_style="BACKSLASH")
     body = markdownify(str(main), **opts)
     contact = markdownify(str(foot), **opts) if foot else ""
-    contact = contact.replace("## ", "### ")
-    md = f"---\ntitle: {title}\ndescription: {desc}\nurl: {page_url}\n---\n\n{body}\n\n## Contact\n\n{contact}"
+    md = f"---\ntitle: {title}\ndescription: {desc}\nurl: {page_url}\n---\n\n{body}\n\n{contact}"
     while "\n\n\n" in md:
         md = md.replace("\n\n\n", "\n\n")
     md = "\n".join(line.rstrip() for line in md.splitlines()).strip() + "\n"

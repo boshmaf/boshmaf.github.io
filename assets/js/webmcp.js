@@ -63,13 +63,13 @@
     },
     {
       name: "get_contact",
-      description: "Get Yazan Boshmaf's contact details: email, office address and profile links.",
+      description: "Get Yazan Boshmaf's contact details: work and personal email, office address and profile links.",
       inputSchema: { type: "object", properties: {} },
       async execute() {
-        const email = document.querySelector(".email[data-user]");
+        const email = Object.fromEntries([...document.querySelectorAll(".email[data-user]")].map(e => [e.dataset.kind, `${e.dataset.user}@${e.dataset.domain}`]));
         const links = Object.fromEntries([...document.querySelectorAll("footer .links a")].map(a => [a.textContent.trim(), a.href]));
         return reply({
-          email: email && `${email.dataset.user}@${email.dataset.domain}`,
+          email,
           office: document.querySelector("footer .foot > div:nth-child(2) p")?.innerText.split("\n"),
           links
         });

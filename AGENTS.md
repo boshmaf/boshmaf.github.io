@@ -118,9 +118,12 @@ are copied as-is, so add any new non-site file (like this one) to `exclude` in
     execute).
   - A new third-party script, font, image host or API needs the policy
     updated, and should be avoided where possible.
-- **Contact details** are deliberately not in plain HTML. The footer stores
-  the email as `data-user`/`data-domain` and the phone in `data-phone`;
-  `site.js` assembles them. Keep it that way.
+- **Contact details** are deliberately not in plain HTML. `author.emails` in
+  `_config.yml` lists the public addresses, each with a `label`; today it is
+  only yazan@boshmaf.com, on purpose (it outlasts any employer). The footer
+  stores each as `data-user`/`data-domain`/`data-kind` and the phone in
+  `data-phone`; `site.js` assembles them and gives each email a Copy button.
+  Labels are shown only when there is more than one address. Keep it that way.
 - **Progressive enhancement.** Every page must work without JavaScript.
   Elements that need JS (filters, BibTeX buttons, search, theme toggle) start
   `hidden` and `site.js` reveals them.

@@ -2,12 +2,17 @@
   <div class="wrap">
     <div class="foot">
       <div>
-        <h2>Email</h2>
+        <h2>Contact</h2>
+        {%- for e in site.author.emails %}
         <div class="copy-row">
-          <a class="email" data-user="{{ site.author.email_user }}" data-domain="{{ site.author.email_domain }}">{{ site.author.email_user }} at {{ site.author.email_domain | replace: ".", " dot " }}</a>
-          <button class="small-btn" type="button" data-copy-email hidden>Copy</button>
+          {%- if site.author.emails.size > 1 %}
+          <span class="email-kind">{{ e.label }}</span>
+          {%- endif %}
+          <a class="email" data-kind="{{ e.label | downcase }}" data-user="{{ e.user }}" data-domain="{{ e.domain }}">{{ e.user }} at {{ e.domain | replace: ".", " dot " }}</a>
+          <button class="small-btn" type="button" data-copy-email{% if site.author.emails.size > 1 %} aria-label="Copy {{ e.label | downcase }} email"{% endif %} hidden>Copy</button>
         </div>
-        <p class="muted">Office <span class="phone" data-phone="{{ site.author.phone | join: ' ' }}">+974 445-[four one five five two]</span></p>
+        {%- endfor %}
+        <p><span class="phone" data-phone="{{ site.author.phone | join: ' ' }}">+974 445-[four one five five two]</span> <span class="muted">(office)</span></p>
       </div>
       <div>
         <h2>Office</h2>

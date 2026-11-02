@@ -11,8 +11,8 @@ author:
   tagline: Researcher, writer, developer, and hacker.
   job_title: Senior Research Scientist
   affiliation: Qatar Computing Research Institute, HBKU
-  email_user: yboshmaf
-  email_domain: hbku.edu.qa
+  emails:  # assembled by JS to deter scrapers
+    - { label: Personal, user: yazan, domain: boshmaf.com }
   phone: ["+974", "445", "41552"]  # assembled by JS to deter scrapers
   office:
     - HBKU Research Complex

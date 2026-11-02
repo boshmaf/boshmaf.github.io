@@ -38,7 +38,11 @@
   });
   $$("[data-copy-email]").forEach(b => {
     b.hidden = false;
-    b.addEventListener("click", () => copy($(".email").textContent, "Email"));
+    b.addEventListener("click", () => {
+      const email = $(".email", b.closest(".copy-row"));
+      const kind = $(".email-kind", b.closest(".copy-row"));
+      copy(email.textContent, kind ? kind.textContent + " email" : "Email");
+    });
   });
   $$(".phone").forEach(s => {
     const [cc, a, b] = s.dataset.phone.split(" ");
