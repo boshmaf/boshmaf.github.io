@@ -1,5 +1,9 @@
 # News, newest first. `items` are Markdown. The homepage shows the first few entries.
 
+- date: 2026-11
+  items:
+    - "I'm attending [CCS 2026](https://www.sigsac.org/ccs/CCS2026/index.html). See you in The Hague!"
+
 - date: 2026-10
   items:
     - "I'm speaking as a panelist at [GT-Q](https://www.qatar.georgetown.edu/) on Technology, Trust, and Policy."
