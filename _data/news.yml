@@ -54,8 +54,8 @@
 - date: 2020-01
   award: true
   items:
-    - "Our proposal *Scalable Blockchain Security Analytics for the Masses* was funded by the [QNRF](https://qrdi.org.qa/en-US/) Technology Development Fund: $70K for one year, with me as lead principal investigator."
-    - "Our proposal *A Secure End-to-End Blockchain-Based Solution to Finance Trade: The Legal, Technological, and Economic Framework* was funded by the [QNRF](https://qrdi.org.qa/en-US/) National Priorities Research Program: $2.57M for five years, with me as a principal investigator."
+    - "Our research on blockchain security analytics was funded by [QNRF](https://qrdi.org.qa/en-US/)."
+    - "Our research on blockchain-based trade finance was funded by [QNRF](https://qrdi.org.qa/en-US/)."
 
 - date: 2019-10
   items:
@@ -75,7 +75,7 @@
 - date: 2019-03
   award: true
   items:
-    - "Our proposal *A Defense-in-Depth Cyber Intelligence Platform to Defend against Emerging Cyber Attacks* was funded by the [TÜBİTAK/QNRF](https://qrdi.org.qa/en-US/) Funding Program: $1.65M for three years, with me as a principal investigator."
+    - "Our research on cyber threat intelligence was funded by [TÜBİTAK/QNRF](https://qrdi.org.qa/en-US/)."
 
 - date: 2019-02
   items:
