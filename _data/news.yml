@@ -51,10 +51,14 @@
   items:
     - "I'm presenting at [AsiaCCS 2020](https://dl.acm.org/doi/proceedings/10.1145/3320269). See you online!"
 
-- date: 2020-01
+- date: 2020-09
   award: true
   items:
     - "Our research on blockchain security analytics was funded by [QNRF](https://qrdi.org.qa/en-US/)."
+
+- date: 2020-01
+  award: true
+  items:
     - "Our research on blockchain-based trade finance was funded by [QNRF](https://qrdi.org.qa/en-US/)."
 
 - date: 2019-10
