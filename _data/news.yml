@@ -51,6 +51,12 @@
   items:
     - "I'm presenting at [AsiaCCS 2020](https://dl.acm.org/doi/proceedings/10.1145/3320269). See you online!"
 
+- date: 2020-01
+  award: true
+  items:
+    - "Our proposal *Scalable Blockchain Security Analytics for the Masses* was funded by the [QNRF](https://qrdi.org.qa/en-US/) Technology Development Fund: $70K for one year, with me as lead principal investigator."
+    - "Our proposal *A Secure End-to-End Blockchain-Based Solution to Finance Trade: The Legal, Technological, and Economic Framework* was funded by the [QNRF](https://qrdi.org.qa/en-US/) National Priorities Research Program: $2.57M for five years, with me as a principal investigator."
+
 - date: 2019-10
   items:
     - "I'm attending [IMC 2019](https://conferences.sigcomm.org/imc/2019/). See you in Amsterdam!"
@@ -65,6 +71,11 @@
 - date: 2019-06
   items:
     - "I'm presenting at [IFIP Sec 2019](https://link.springer.com/book/10.1007/978-3-030-22312-0). See you in Lisbon!"
+
+- date: 2019-03
+  award: true
+  items:
+    - "Our proposal *A Defense-in-Depth Cyber Intelligence Platform to Defend against Emerging Cyber Attacks* was funded by the [TÜBİTAK/QNRF](https://qrdi.org.qa/en-US/) Funding Program: $1.65M for three years, with me as a principal investigator."
 
 - date: 2019-02
   items:
@@ -92,7 +103,6 @@
 
 - date: 2018-03
   items:
-    - "Our [TÜBİTAK/QNRF](https://qrdi.org.qa/en-US/) grant proposal has been accepted."
     - "I'm joining the [3rd Cybersecurity Experts Group](https://thepeninsulaqatar.com/article/27/03/2018/Third-Cybersecurity-Experts-Group-meeting-begins) meeting."
     - "I'm co-presenting our Bitcoin/Tor privacy work at the FTC."
 
